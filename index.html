@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wade Williams Wired | Low-Voltage, Network Infrastructure & Comm Rentals</title>
+  <meta name="description" content="Turnkey network cabling, commercial communications rentals, server rack integration, and low-voltage field deployments across Southern California.">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent: #38bdf8;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    header { border-bottom: 1px solid var(--card-border); padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(8px); z-index: 10; }
+    .brand { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; }
+    .brand span { color: var(--accent); }
+    .nav-btn { background: var(--primary); color: #fff; padding: 0.6rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.2s ease; }
+    .nav-btn:hover { background: var(--primary-hover); }
+    .hero { max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem 4rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center; }
+    .hero-text h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; }
+    .hero-text h1 span { color: var(--accent); }
+    .hero-text p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .badges { display: flex; gap: 1.5rem; margin-top: 1rem; }
+    .badge { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+    .quote-card { background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); }
+    .quote-card h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .quote-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-muted); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--card-border); border-radius: 6px; background: #0b0f19; color: #fff; font-size: 0.95rem; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+    .submit-btn { width: 100%; padding: 0.9rem; background: var(--primary); border: none; border-radius: 6px; color: #fff; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.2s ease; margin-top: 0.5rem; }
+    .submit-btn:hover { background: var(--primary-hover); }
+    .section { max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem; }
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .section-title p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 2rem; transition: transform 0.2s ease, border-color 0.2s ease; }
+    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .specs-list { list-style: none; padding: 0; margin-top: 1rem; border-top: 1px solid var(--card-border); padding-top: 1rem; }
+    .specs-list li { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.4rem; display: flex; align-items: center; }
+    .specs-list li::before { content: "✓"; color: var(--accent); margin-right: 0.5rem; font-weight: bold; }
+    footer { border-top: 1px solid var(--card-border); padding: 3rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">WADE WILLIAMS <span>WIRED</span></div>
+    <a href="#quote" class="nav-btn">Request a Quote</a>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Enterprise Hardware & <span>Field Comms</span> Built to Perform.</h1>
+      <p>Precision structured cabling, custom server rack deployments, and tour-grade commercial communications rentals configured, tested, and delivered ready to deploy.</p>
+      <div class="badges">
+        <span class="badge">Bench-Tested Hardware</span>
+        <span class="badge">Commercial SLA Backing</span>
+        <span class="badge">Same-Day Dispatch</span>
+      </div>
+    </div>
+    <div class="quote-card" id="quote">
+      <h2>Build Your Deployment</h2>
+      <p>Fill in your project specifications for an expedited quote.</p>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label>Service Type</label>
+          <select name="service" required>
+            <option value="radio-rentals">Commercial Two-Way Comms Fleet</option>
+            <option value="network-cabling">Structured Cabling (Cat6A / Fiber)</option>
+            <option value="rack-integration">Server Rack & Network Infrastructure</option>
+            <option value="onsite-tech">On-Site Dispatch & Event Tech Support</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estimated Quantity / Scope</label>
+          <input type="text" name="scope" placeholder="e.g. 12 Radios or 48 Drops" required>
+        </div>
+        <div class="form-group">
+          <label>Deployment Date / Target Timeline</label>
+          <input type="date" name="timeline" required>
+        </div>
+        <div class="form-group">
+          <label>Work Email</label>
+          <input type="email" name="email" placeholder="name@company.com" required>
+        </div>
+        <button type="submit" class="submit-btn">Request Estimate</button>
+      </form>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-title">
+      <h2>Field & Infrastructure Hardware</h2>
+      <p>Standardized, rugged equipment tested under load before deployment.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Motorola MOTOTRBO Commercial Fleet</h3>
+        <p>Digital/analog UHF/VHF handheld transceivers programmed for secure local site operations and clear perimeter communication.</p>
+        <ul class="specs-list">
+          <li>Pre-configured talk groups & private channels</li>
+          <li>Multi-bank rapid bank chargers included</li>
+          <li>Heavy-duty surveillance headsets & shoulder mics</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Push-To-Talk Nationwide PoC Units</h3>
+        <p>Cellular-backed handhelds offering infinite operating radius, instant group broadcasting, and live dispatch oversight.</p>
+        <ul class="specs-list">
+          <li>Nationwide 4G/LTE connectivity</li>
+          <li>GPS asset mapping & centralized console access</li>
+          <li>Zero repeater overhead required</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Structured Cabling & Rack Systems</h3>
+        <p>Clean-run Cat6A, single/multimode fiber patch lines, enterprise firewalls, and optimized rack layouts built for uptime.</p>
+        <ul class="specs-list">
+          <li>Fluke DTX-certified cable terminations</li>
+          <li>Integrated cable management & PDUs</li>
+          <li>SonicWall / Dell enterprise integration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2026 Wade Williams Wired. All rights reserved. High-reliability communications & systems engineering.</p>
+  </footer>
+</body>
+</html>
