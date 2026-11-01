@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wade Williams Wired | IT Server Management, Consulting & AI Automation — San Diego</title>
+    <title>Wade Williams Wired | Senior IT Infrastructure, Cybersecurity & AI Automation — San Diego</title>
+    <meta name="description" content="Vendor-agnostic IT server management, network security, structured cabling, and ROI-driven AI workflow automation across all hardware platforms for San Diego businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-deep: #0a0d14;
-            --bg-card: rgba(255, 255, 255, 0.04);
-            --border-glass: rgba(255, 255, 255, 0.08);
-            --border-glow: rgba(0, 240, 255, 0.3);
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
+            --bg-deep: #060911;
+            --bg-surface: rgba(13, 19, 33, 0.65);
+            --bg-card: rgba(255, 255, 255, 0.035);
+            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --border-glass: rgba(255, 255, 255, 0.09);
+            --border-glow: rgba(0, 240, 255, 0.45);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
             --accent-cyan: #00f0ff;
             --accent-blue: #3b82f6;
+            --accent-indigo: #6366f1;
+            --accent-emerald: #10b981;
+            --danger-red: #f43f5e;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
         }
 
         body {
@@ -28,41 +43,121 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
-            background-image: 
-                radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.07) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(59, 130, 246, 0.07) 0%, transparent 40%);
-            background-attachment: fixed;
+            position: relative;
         }
 
+        /* Interactive Fluid Canvas Background */
+        #fluid-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+
+        /* Subtle Ambient Aurora Blobs */
+        .ambient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(110px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.35;
+            animation: floatOrb 18s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.28), transparent 70%);
+            top: -120px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent 70%);
+            bottom: -180px;
+            right: -120px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.18), transparent 70%);
+            top: 42%;
+            left: 55%;
+            animation-delay: -12s;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(40px, -35px) scale(1.08); }
+            100% { transform: translate(-30px, 25px) scale(0.95); }
+        }
+
+        /* Layout Wrapper */
+        .site-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header / Navigation */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(10, 13, 20, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(6, 9, 17, 0.72);
+            backdrop-filter: blur(22px) saturate(160%);
+            -webkit-backdrop-filter: blur(22px) saturate(160%);
             border-bottom: 1px solid var(--border-glass);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 5%;
         }
 
         .logo {
-            font-weight: 700;
+            font-weight: 800;
             font-size: 1.25rem;
             color: #fff;
             text-decoration: none;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.03em;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.65rem;
+        }
+
+        .logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            display: grid;
+            place-items: center;
+            color: #060911;
+            font-weight: 900;
+            font-size: 0.95rem;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
         }
 
         .logo span {
-            color: var(--accent-cyan);
+            background: linear-gradient(90deg, var(--accent-cyan), #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         nav {
@@ -74,116 +169,284 @@
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: var(--accent-cyan);
         }
 
+        .nav-cta {
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.35);
+            color: var(--accent-cyan) !important;
+            padding: 0.55rem 1.15rem;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: all 0.25s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #060911 !important;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
         .hero {
-            min-height: 90vh;
+            min-height: 96vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 8rem 1.5rem 4rem 1.5rem;
-            max-width: 900px;
+            padding: 8.5rem 1.5rem 4rem;
+            max-width: 1080px;
             margin: 0 auto;
         }
 
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.45rem 1.1rem;
+            border-radius: 999px;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #d1fae5;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.12);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-emerald);
+            box-shadow: 0 0 10px var(--accent-emerald);
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.65; }
+        }
+
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-size: clamp(2.6rem, 5.6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.035em;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 30%, #9ca3af 100%);
+            color: #ffffff;
+        }
+
+        .hero h1 .fluid-gradient {
+            background: linear-gradient(90deg, #00f0ff, #60a5fa, #a855f7, #00f0ff);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: gradientFlow 7s linear infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: clamp(1.08rem, 2vw, 1.28rem);
             color: var(--text-muted);
-            max-width: 650px;
+            max-width: 740px;
             margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero p strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3.5rem;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #0a0d14;
-            font-weight: 600;
-            padding: 0.875rem 2rem;
+            color: #060911;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1rem 2.1rem;
             border-radius: 9999px;
             text-decoration: none;
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.5);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 45px rgba(0, 240, 255, 0.6);
         }
 
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px);
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 240, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Proof Strip */
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 980px;
+            padding: 1.5rem 2rem;
+            background: rgba(13, 19, 33, 0.6);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .proof-item {
+            text-align: center;
+            padding: 0.25rem 0.5rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .proof-item:last-child {
+            border-right: none;
+        }
+
+        .proof-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            line-height: 1.2;
+        }
+
+        .proof-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        /* Section Containers */
         .container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 5.5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-cyan);
+            margin-bottom: 0.75rem;
+            display: inline-block;
         }
 
         .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            letter-spacing: -0.02em;
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 1rem;
         }
 
-        /* Liquid Glass Card Styling */
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Liquid Glass Cards with 3D Tilt & Spotlight */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.75rem;
         }
 
         .glass-card {
             background: var(--bg-card);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(18px) saturate(140%);
+            -webkit-backdrop-filter: blur(18px) saturate(140%);
             border: 1px solid var(--border-glass);
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 22px;
+            padding: 2.25rem;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform-style: preserve-3d;
         }
 
         .glass-card:hover {
-            transform: translateY(-6px);
             border-color: var(--border-glow);
-            box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 240, 255, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(0, 240, 255, 0.14), inset 0 0 20px rgba(0, 240, 255, 0.05);
         }
 
         /* Interactive Liquid Cursor Light Leak */
-        .glass-card::before {
+        .glass-card::before, .roi-panel::before, .contact-section::before {
             content: '';
             position: absolute;
-            top: var(--y, 0px);
-            left: var(--x, 0px);
+            top: var(--y, 50%);
+            left: var(--x, 50%);
             transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, transparent 70%);
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.16) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%);
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.35s ease;
             pointer-events: none;
             z-index: 1;
         }
 
-        .glass-card:hover::before {
+        .glass-card:hover::before, .roi-panel:hover::before, .contact-section:hover::before {
             opacity: 1;
         }
 
@@ -192,163 +455,933 @@
             z-index: 2;
         }
 
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(59, 130, 246, 0.15));
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.35rem;
+            color: var(--accent-cyan);
+            font-size: 1.35rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            padding: 0.2rem 0.65rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
         .glass-card h3 {
             font-size: 1.35rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
             color: #fff;
+            letter-spacing: -0.015em;
         }
 
         .glass-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            margin-bottom: 1.25rem;
         }
 
-        /* Contact Form Section */
-        .contact-section {
-            max-width: 600px;
-            margin: 4rem auto;
+        .deliverables {
+            list-style: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+
+        .deliverables li {
+            font-size: 0.86rem;
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .deliverables li::before {
+            content: "✦";
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        /* Why Businesses Switch (Comparison Section) */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .comp-card {
+            border-radius: 22px;
+            padding: 2.5rem;
+            backdrop-filter: blur(18px);
+        }
+
+        .comp-bad {
+            background: rgba(244, 63, 94, 0.04);
+            border: 1px solid rgba(244, 63, 94, 0.2);
+        }
+
+        .comp-good {
+            background: linear-gradient(160deg, rgba(0, 240, 255, 0.09), rgba(59, 130, 246, 0.06));
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.12);
+            position: relative;
+        }
+
+        .comp-badge {
+            position: absolute;
+            top: -13px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #060911;
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.3rem 0.85rem;
+            border-radius: 999px;
+        }
+
+        .comp-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .comp-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.96rem;
+            color: #e2e8f0;
+        }
+
+        .comp-bad .comp-list li {
+            color: var(--text-muted);
+        }
+
+        /* Interactive ROI & Automation Calculator */
+        .roi-panel {
+            background: linear-gradient(145deg, rgba(13, 19, 33, 0.85), rgba(20, 30, 52, 0.65));
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            border-radius: 26px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .roi-panel > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .slider-group {
+            margin-bottom: 1.6rem;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        .slider-val {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-cyan);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            box-shadow: 0 0 15px var(--accent-cyan);
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .roi-result-box {
+            background: rgba(6, 9, 17, 0.75);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 20px;
+            padding: 2.25rem;
+            text-align: center;
+        }
+
+        .roi-big-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(2.2rem, 4vw, 3.1rem);
+            font-weight: 800;
+            color: var(--accent-emerald);
+            margin: 0.5rem 0;
+            text-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+        }
+
+        .roi-hours-saved {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact & Fast Quote Builder */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .contact-info-card {
             background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-glass);
             border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            padding: 2.5rem;
+            backdrop-filter: blur(18px);
+        }
+
+        .contact-direct-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 1rem;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .contact-direct-item:hover {
+            border-color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        .contact-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.75rem;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .service-pill.active, .service-pill:hover {
+            background: rgba(0, 240, 255, 0.14);
+            border-color: var(--accent-cyan);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.45rem;
+            color: #cbd5e1;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
             padding: 0.875rem 1rem;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(6, 9, 17, 0.65);
             border: 1px solid var(--border-glass);
             border-radius: 12px;
             color: #fff;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            font-family: inherit;
             outline: none;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: var(--accent-cyan);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 18px rgba(0, 240, 255, 0.2);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 110px;
         }
 
-        button[type="submit"] {
+        .submit-btn {
             width: 100%;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #0a0d14;
-            font-weight: 600;
-            padding: 1rem;
+            color: #060911;
+            font-weight: 800;
+            padding: 1.05rem;
             border-radius: 12px;
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+            box-shadow: 0 0 28px rgba(0, 240, 255, 0.3);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        button[type="submit"]:hover {
+        .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.55);
+        }
+
+        .form-feedback {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #d1fae5;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1.5rem;
+            padding: 3.5rem 1.5rem;
             border-top: 1px solid var(--border-glass);
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.88rem;
+            background: rgba(6, 9, 17, 0.8);
+        }
+
+        @media (max-width: 920px) {
+            .proof-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .proof-item:nth-child(2) {
+                border-right: none;
+            }
+            .comparison-grid, .roi-panel, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            nav a:not(.nav-cta) {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">Wade Williams <span>Wired</span></a>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Fluid Interactive Network Canvas -->
+    <canvas id="fluid-canvas"></canvas>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
 
-    <section class="hero">
-        <h1>IT That Just Works. Automation That Pays For Itself.</h1>
-        <p>Senior-level server management, tech consulting, and practical AI automation for San Diego businesses—built with absolute reliability and precision.</p>
-        <a href="#contact" class="btn-primary">Start Your Project</a>
-    </section>
-
-    <section id="services" class="container">
-        <h2 class="section-title">Core Services</h2>
-        <div class="grid">
-            <div class="glass-card">
-                <h3>IT Server Management</h3>
-                <p>Proactive monitoring, maintenance, and robust server architecture keeping your infrastructure online around the clock.</p>
+    <div class="site-wrapper">
+        <header>
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <div class="logo-mark">W</div>
+                    <div>Wade Williams <span>Wired</span></div>
+                </a>
+                <nav>
+                    <a href="#services">Solutions</a>
+                    <a href="#why-wade">Why Switch</a>
+                    <a href="#roi-calculator">ROI Calculator</a>
+                    <a href="#contact" class="nav-cta">Book Free IT & AI Audit →</a>
+                </nav>
             </div>
-            <div class="glass-card">
-                <h3>Technology Consulting</h3>
-                <p>Straight answers and senior-level guidance on cloud architecture, security, SonicWall firewalls, and network topology.</p>
-            </div>
-            <div class="glass-card">
-                <h3>AI Automation</h3>
-                <p>Custom practical AI solutions designed to eliminate repetitive workflows, streamline operations, and scale your efficiency.</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-section">
-            <form action="mailto:wade@wadewilliamswired.com" method="POST" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="name@company.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required placeholder="Tell me about your project or IT needs..."></textarea>
-                </div>
-                <button type="submit">Submit Request</button>
-            </form>
-        </div>
-    </section>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="status-pill">
+                <span class="pulse-dot"></span>
+                <span>Serving San Diego County & El Cajon • Direct Senior Engineer Access</span>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Wade Williams Wired. All rights reserved. El Cajon, San Diego County, CA.</p>
-    </footer>
+            <h1>
+                Bulletproof IT Infrastructure.<br>
+                <span class="fluid-gradient">AI Automation That Pays For Itself.</span>
+            </h1>
+
+            <p>
+                Stop losing billable hours to slow servers, firewall headaches, and repetitive manual admin work. Get <strong>full-stack server management across all hardware brands, enterprise network security, structured cabling, and custom AI workflows</strong> engineered directly by a senior systems architect.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">
+                    <span>Get a Same-Day Assessment</span>
+                    <span>→</span>
+                </a>
+                <a href="#roi-calculator" class="btn-secondary">
+                    <span>Calculate Your Annual Savings</span>
+                </a>
+            </div>
+
+            <div class="proof-strip">
+                <div class="proof-item">
+                    <div class="proof-value">99.98%</div>
+                    <div class="proof-label">Target Server & Network Uptime</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-value">&lt; 15m</div>
+                    <div class="proof-label">Critical Incident Response</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-value">15–30h</div>
+                    <div class="proof-label">Saved Weekly via AI Workflows</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-value">100%</div>
+                    <div class="proof-label">Senior Engineer — Zero Tier-1 Runaround</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Full-Stack Infrastructure & Automation</span>
+                <h2 class="section-title">Engineered to Keep You Online—Across Every Hardware Platform</h2>
+                <p class="section-subtitle">We work on all enterprise and commercial hardware—no vendor lock-in. Whether you need a mission-critical server rack rescued, a multi-site firewall deployment, or custom AI agents that eliminate manual data entry, everything is built to perform under load.</p>
+            </div>
+
+            <div class="grid">
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">⚡</div>
+                        <span class="card-tag">ALL SERVER & HARDWARE BRANDS</span>
+                        <h3>24/7 Server & Hardware Management</h3>
+                        <p>Proactive monitoring, diagnostics, repairs, virtualization, and immutable disaster recovery across every major server and workstation platform.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>All hardware supported (Dell, HPE, Lenovo, Supermicro & custom)</li>
+                        <li>Windows, Linux, VMware, Hyper-V & Proxmox environments</li>
+                        <li>Automated off-site backups & active health telemetry</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">🤖</div>
+                        <span class="card-tag">REVENUE ACCELERATION</span>
+                        <h3>Practical AI & Workflow Automation</h3>
+                        <p>Turn hours of repetitive copy-pasting, quoting, inbox triage, and report generation into autonomous background pipelines that run 24/7.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>Custom AI intake, instant lead response & quoting</li>
+                        <li>Automated invoice, document & CRM synchronization</li>
+                        <li>Private, secure AI tools tailored to your SOPs</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">🛡️</div>
+                        <span class="card-tag">ZERO-TRUST SECURITY</span>
+                        <h3>Firewalls, VPNs & Network Security</h3>
+                        <p>Lock down your perimeter and remote workforce with enterprise firewall policies, segmented VLANs, and encrypted site-to-site VPN topology.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>SonicWall, Fortinet, Cisco, Ubiquiti & pfSense firewalls</li>
+                        <li>Zero-trust VPN & secure remote team access</li>
+                        <li>Multi-WAN failover so internet drops never stop operations</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">🔌</div>
+                        <span class="card-tag">PHYSICAL LAYER PRECISION</span>
+                        <h3>Structured Cabling & Server Rack Rescue</h3>
+                        <p>We transform chaotic, overheating wiring closets into clean, labeled, Fluke-tested Cat6A and fiber rack deployments built for effortless servicing.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>Cat6A, fiber optic patch lines & clean rack dressing</li>
+                        <li>Smart PDU power management & UPS battery backup</li>
+                        <li>Commercial Wi-Fi heatmapping & high-density APs</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">📡</div>
+                        <span class="card-tag">FIELD & EVENT COMMS</span>
+                        <h3>Commercial Two-Way Radio & PoC Fleets</h3>
+                        <p>Bench-tested Motorola MOTOTRBO and nationwide Push-To-Talk over Cellular (PoC) communication fleets programmed and ready for immediate deployment.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>Pre-programmed private channels & rapid multi-chargers</li>
+                        <li>Nationwide 4G/LTE PoC units with live GPS dispatch</li>
+                        <li>Same-day SoCal field delivery & on-site tech support</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div>
+                        <div class="card-icon">🧭</div>
+                        <span class="card-tag">EXECUTIVE GUIDANCE</span>
+                        <h3>Fractional CTO & Technology Consulting</h3>
+                        <p>Straight answers and vendor-neutral architecture reviews. Stop overpaying for bloated software licenses and underperforming IT retainers.</p>
+                    </div>
+                    <ul class="deliverables">
+                        <li>Cloud vs. on-prem cost optimization audits</li>
+                        <li>Hardware lifecycle & expansion roadmaps</li>
+                        <li>Direct accountability from a single senior expert</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY SWITCH COMPARISON -->
+        <section id="why-wade" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// The Wade Williams Wired Difference</span>
+                <h2 class="section-title">Why San Diego Businesses Switch to Wade</h2>
+                <p class="section-subtitle">Most IT companies trap you in slow ticket queues with junior technicians. Here is what happens when you work directly with a senior systems engineer.</p>
+            </div>
+
+            <div class="comparison-grid reveal">
+                <div class="comp-card comp-bad">
+                    <h3 style="color: #fda4af; font-size: 1.3rem;">Typical Managed IT Providers (MSPs)</h3>
+                    <ul class="comp-list">
+                        <li><span>✕</span> <span>Wait 24–48 hours in a Tier-1 helpdesk queue just to get your ticket escalated.</span></li>
+                        <li><span>✕</span> <span>Band-aid fixes that cause the exact same server or network issue next month.</span></li>
+                        <li><span>✕</span> <span>Messy wiring closets and undocumented firewall rules nobody understands.</span></li>
+                        <li><span>✕</span> <span>Zero AI capability—leaving your staff stuck doing repetitive manual data entry.</span></li>
+                        <li><span>✕</span> <span>Surprise markups on hardware and bloated monthly per-seat contracts.</span></li>
+                    </ul>
+                </div>
+
+                <div class="comp-card comp-good">
+                    <span class="comp-badge">Direct Senior Engineering</span>
+                    <h3 style="color: #fff; font-size: 1.35rem;">Wade Williams Wired</h3>
+                    <ul class="comp-list">
+                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Direct access to Wade:</strong> Speak straight to the senior architect who built and knows your stack.</span></li>
+                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>We work on ALL hardware:</strong> Servers, NAS, firewalls, switches, and custom rigs—any brand, new or legacy.</span></li>
+                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Showroom-clean racks:</strong> Labeled, tested, and documented infrastructure you can be proud of.</span></li>
+                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>ROI-driven AI automation:</strong> Custom workflows that save 15–30+ payroll hours every week.</span></li>
+                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Transparent pricing:</strong> Clear project scopes or predictable retainers tailored to your exact footprint.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ROI CALCULATOR -->
+        <section id="roi-calculator" class="container">
+            <div class="roi-panel reveal">
+                <div>
+                    <span class="eyebrow">// Interactive Savings Estimator</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem;">See How Much Slow IT & Manual Work Is Costing You</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.98rem;">
+                        Adjust the sliders below to estimate how much payroll and productivity your business reclaims with reliable infrastructure and custom AI workflow automation.
+                    </p>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Team Size (Employees)</span>
+                            <span class="slider-val" id="team-val">12 Employees</span>
+                        </div>
+                        <input type="range" id="team-slider" min="2" max="75" value="12">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Hours Lost / Person / Week (IT Glitches + Repetitive Admin)</span>
+                            <span class="slider-val" id="hours-val">3.5 hrs/wk</span>
+                        </div>
+                        <input type="range" id="hours-slider" min="1" max="10" step="0.5" value="3.5">
+                    </div>
+
+                    <div class="slider-group" style="margin-bottom: 0;">
+                        <div class="slider-header">
+                            <span>Average Hourly Staff Cost (Loaded)</span>
+                            <span class="slider-val" id="rate-val">$42 / hr</span>
+                        </div>
+                        <input type="range" id="rate-slider" min="25" max="120" step="1" value="42">
+                    </div>
+                </div>
+
+                <div class="roi-result-box">
+                    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600;">Estimated Reclaimed Value / Year</div>
+                    <div class="roi-big-number" id="roi-dollars">$54,970</div>
+                    <div class="roi-hours-saved" id="roi-hours">1,310+ Hours Returned to Growth</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Based on automating 60% of repetitive workflows & eliminating preventable network downtime.
+                    </p>
+                    <a href="#contact" id="apply-roi-btn" class="btn-primary" style="width: 100%; justify-content: center;">
+                        Claim Your Custom Automation Plan →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & FAST QUOTE SECTION -->
+        <section id="contact" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Start Your Project</span>
+                <h2 class="section-title">Ready for IT That Never Slows You Down?</h2>
+                <p class="section-subtitle">Select what you need below and send a direct request to Wade. Most inquiries receive a personal response the same business day.</p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <div class="contact-info-card">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">Direct Senior Support</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        Based in El Cajon and serving businesses across all of San Diego County & Southern California with on-site and remote engineering.
+                    </p>
+
+                    <a href="mailto:wade@wadewilliamswired.com" class="contact-direct-item">
+                        <div class="card-icon" style="margin-bottom: 0; width: 42px; height: 42px;">✉️</div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">Direct Email</div>
+                            <div style="font-weight: 700; color: var(--accent-cyan);">wade@wadewilliamswired.com</div>
+                        </div>
+                    </a>
+
+                    <div class="contact-direct-item">
+                        <div class="card-icon" style="margin-bottom: 0; width: 42px; height: 42px;">📍</div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">Service Area</div>
+                            <div style="font-weight: 600;">El Cajon • San Diego • Southern California</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-direct-item">
+                        <div class="card-icon" style="margin-bottom: 0; width: 42px; height: 42px;">⚡</div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">What Happens Next?</div>
+                            <div style="font-size: 0.88rem; color: #cbd5e1;">1. Quick 15-min discovery call<br>2. Clear architecture or automation plan<br>3. Fast, zero-disruption deployment</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                    <form id="lead-form">
+                        <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.6rem; color:#cbd5e1;">1. What can Wade help you with? (Click to select)</label>
+                        <div class="service-pills" id="service-pills">
+                            <button type="button" class="service-pill active" data-service="Server & Hardware Management">Server & Hardware (All Brands)</button>
+                            <button type="button" class="service-pill" data-service="AI Workflow Automation">AI Workflow Automation</button>
+                            <button type="button" class="service-pill" data-service="Firewall & Network Security">Firewall & Network Security</button>
+                            <button type="button" class="service-pill" data-service="Rack Cleanup & Cabling">Rack Cleanup & Cabling</button>
+                            <button type="button" class="service-pill" data-service="Commercial Radio / PoC Fleet">Radio / PoC Comms</button>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company / Organization</label>
+                                <input type="text" id="company" name="company" placeholder="San Diego Logistics Co.">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Work Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="you@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(619) 555-0199">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details or Current Frustration *</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your servers, network setup, or the manual workflows you want to automate..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Priority Request to Wade →</button>
+                        <div id="form-feedback" class="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Wade Williams Wired. All rights reserved. El Cajon, San Diego County, CA • High-Reliability IT Infrastructure, Cybersecurity & AI Automation.</p>
+        </footer>
+    </div>
 
     <script>
-        // Interactive cursor liquid light leak effect
-        document.querySelectorAll('.glass-card, .contact-section').forEach(card => {
+        // 1. Interactive Fluid Network & Particle Canvas
+        const canvas = document.getElementById('fluid-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+        const mouse = { x: -1000, y: -1000, radius: 180 };
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initParticles();
+        }
+
+        function initParticles() {
+            const count = Math.min(Math.floor((width * height) / 18000), 75);
+            particles = [];
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.65,
+                    vy: (Math.random() - 0.5) * 0.65,
+                    size: Math.random() * 2 + 1
+                });
+            }
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('mousemove', e => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Soft cursor fluid glow on canvas
+            if (mouse.x > 0) {
+                const grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
+                grad.addColorStop(0, 'rgba(0, 240, 255, 0.08)');
+                grad.addColorStop(1, 'transparent');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, width, height);
+            }
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                // Fluid mouse repulsion / attraction
+                const dx = mouse.x - p.x;
+                const dy = mouse.y - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < mouse.radius) {
+                    const force = (mouse.radius - dist) / mouse.radius;
+                    p.x -= (dx / dist) * force * 1.4;
+                    p.y -= (dy / dist) * force * 1.4;
+                }
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 240, 255, 0.55)';
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const ldx = p.x - p2.x;
+                    const ldy = p.y - p2.y;
+                    const ldist = Math.sqrt(ldx * ldx + ldy * ldy);
+                    if (ldist < 145) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${(1 - ldist / 145) * 0.25})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        resizeCanvas();
+        animateCanvas();
+
+        // 2. Liquid Cursor Light Leak + Subtle 3D Tilt on Cards
+        document.querySelectorAll('.glass-card, .roi-panel, .contact-section').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
                 card.style.setProperty('--x', `${x}px`);
                 card.style.setProperty('--y', `${y}px`);
+
+                if (card.classList.contains('glass-card')) {
+                    const rotateY = ((x / rect.width) - 0.5) * 6;
+                    const rotateX = ((y / rect.height) - 0.5) * -6;
+                    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                }
             });
+
+            card.addEventListener('mouseleave', () => {
+                if (card.classList.contains('glass-card')) {
+                    card.style.transform = '';
+                }
+            });
+        });
+
+        // 3. Scroll Reveal Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 4. Interactive ROI Calculator
+        const teamSlider = document.getElementById('team-slider');
+        const hoursSlider = document.getElementById('hours-slider');
+        const rateSlider = document.getElementById('rate-slider');
+        const teamVal = document.getElementById('team-val');
+        const hoursVal = document.getElementById('hours-val');
+        const rateVal = document.getElementById('rate-val');
+        const roiDollars = document.getElementById('roi-dollars');
+        const roiHours = document.getElementById('roi-hours');
+
+        function updateROI() {
+            const team = parseFloat(teamSlider.value);
+            const hours = parseFloat(hoursSlider.value);
+            const rate = parseFloat(rateSlider.value);
+
+            teamVal.textContent = `${team} Employees`;
+            hoursVal.textContent = `${hours} hrs/wk`;
+            rateVal.textContent = `$${rate} / hr`;
+
+            // 60% reclaim factor across 50 working weeks
+            const reclaimedHours = Math.round(team * hours * 50 * 0.6);
+            const reclaimedDollars = Math.round(reclaimedHours * rate);
+
+            roiDollars.textContent = `$${reclaimedDollars.toLocaleString()}`;
+            roiHours.textContent = `${reclaimedHours.toLocaleString()}+ Hours Returned to Growth`;
+        }
+
+        [teamSlider, hoursSlider, rateSlider].forEach(s => s.addEventListener('input', updateROI));
+        updateROI();
+
+        // 5. Interactive Service Selector & Lead Form Handler
+        const selectedServices = new Set(['Server & Hardware Management']);
+        document.querySelectorAll('.service-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const svc = pill.dataset.service;
+                if (selectedServices.has(svc) && selectedServices.size > 1) {
+                    selectedServices.delete(svc);
+                    pill.classList.remove('active');
+                } else {
+                    selectedServices.add(svc);
+                    pill.classList.add('active');
+                }
+            });
+        });
+
+        document.getElementById('apply-roi-btn').addEventListener('click', () => {
+            const msgBox = document.getElementById('message');
+            msgBox.value = `We have ~${teamSlider.value} team members and want to explore reclaiming ${roiHours.textContent} (${roiDollars.textContent}/yr) through IT optimization and AI automation.`;
+        });
+
+        document.getElementById('lead-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const services = Array.from(selectedServices).join(', ');
+
+            const subject = encodeURIComponent(`New Project Inquiry: ${services} (${company || name})`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nServices Needed: ${services}\n\nProject Details:\n${message}`
+            );
+
+            window.location.href = `mailto:wade@wadewilliamswired.com?subject=${subject}&body=${body}`;
+
+            const feedback = document.getElementById('form-feedback');
+            feedback.style.display = 'block';
+            feedback.innerHTML = `✓ Opening your email client addressed to <strong>wade@wadewilliamswired.com</strong>! If it didn't open automatically, email <a href="mailto:wade@wadewilliamswired.com" style="color:var(--accent-cyan);">wade@wadewilliamswired.com</a> directly.`;
         });
     </script>
 </body>
