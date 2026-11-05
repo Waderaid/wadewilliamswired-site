@@ -4,16 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wade Williams Wired | Small Business AI Automation & IT Infrastructure — San Diego</title>
-    <meta name="description" content="Practical AI automation for small businesses, vendor-agnostic IT server management, and network security across all hardware platforms in San Diego County.">
+    <meta name="description" content="San Diego's small business AI specialist. Practical AI workflow automation, 24/7 server management across all hardware brands, zero-trust network security, and commercial comms.">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="Wade Williams Wired | Small Business AI Automation & IT Infrastructure">
+    <meta property="og:description" content="AI built for small business. Full-stack server management across all hardware brands, SonicWall/Fortinet security, and automated workflows that save 15-30+ hours/week.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wadewilliamswired.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#060911">
+
+    <!-- JSON-LD LocalBusiness & ProfessionalService Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Wade Williams Wired",
+      "image": "https://wadewilliamswired.com/favicon.ico",
+      "url": "https://wadewilliamswired.com",
+      "telephone": "+1-619-555-0199",
+      "email": "wade@wadewilliamswired.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "El Cajon",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.7948,
+        "longitude": -116.9625
+      },
+      "areaServed": [
+        "San Diego", "El Cajon", "La Mesa", "Chula Vista", "Santee", "Poway", "Escondido", "Carlsbad", "Southern California"
+      ],
+      "knowsAbout": [
+        "Small Business AI Automation",
+        "Server Management",
+        "Network Security",
+        "SonicWall Firewalls",
+        "Cloud Migration",
+        "Two-Way Radio Rentals"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-deep: #060911;
-            --bg-surface: rgba(13, 19, 33, 0.65);
+            --bg-surface: rgba(13, 19, 33, 0.72);
             --bg-card: rgba(255, 255, 255, 0.035);
-            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --bg-card-hover: rgba(255, 255, 255, 0.065);
             --border-glass: rgba(255, 255, 255, 0.09);
             --border-glow: rgba(0, 240, 255, 0.45);
             --text-main: #f8fafc;
@@ -22,6 +69,7 @@
             --accent-blue: #3b82f6;
             --accent-indigo: #6366f1;
             --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
             --danger-red: #f43f5e;
         }
 
@@ -46,7 +94,19 @@
             position: relative;
         }
 
-        /* Interactive Fluid Canvas Background */
+        /* 1. Scroll Progress Indicator Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-indigo));
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+
+        /* 2. Interactive Fluid Canvas Background */
         #fluid-canvas {
             position: fixed;
             top: 0;
@@ -58,7 +118,7 @@
             opacity: 0.85;
         }
 
-        /* Subtle Ambient Aurora Blobs */
+        /* Ambient Aurora Blobs */
         .ambient-orb {
             position: fixed;
             border-radius: 50%;
@@ -114,9 +174,9 @@
             left: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(6, 9, 17, 0.72);
-            backdrop-filter: blur(22px) saturate(160%);
-            -webkit-backdrop-filter: blur(22px) saturate(160%);
+            background: rgba(6, 9, 17, 0.75);
+            backdrop-filter: blur(24px) saturate(160%);
+            -webkit-backdrop-filter: blur(24px) saturate(160%);
             border-bottom: 1px solid var(--border-glass);
             transition: all 0.3s ease;
         }
@@ -124,7 +184,7 @@
         .header-inner {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0.95rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -142,16 +202,16 @@
         }
 
         .logo-mark {
-            width: 34px;
-            height: 34px;
+            width: 36px;
+            height: 36px;
             border-radius: 10px;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
             display: grid;
             place-items: center;
             color: #060911;
             font-weight: 900;
-            font-size: 0.95rem;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            font-size: 1rem;
+            box-shadow: 0 0 22px rgba(0, 240, 255, 0.45);
         }
 
         .logo span {
@@ -162,7 +222,7 @@
 
         nav {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem;
             align-items: center;
         }
 
@@ -186,6 +246,9 @@
             border-radius: 999px;
             font-weight: 600;
             transition: all 0.25s ease !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
         }
 
         .nav-cta:hover {
@@ -195,16 +258,54 @@
             transform: translateY(-1px);
         }
 
+        /* 3. Mobile Hamburger Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .mobile-drawer {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: rgba(6, 9, 17, 0.97);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1.5rem 2rem;
+            flex-direction: column;
+            gap: 1.2rem;
+            z-index: 99;
+            backdrop-filter: blur(20px);
+        }
+
+        .mobile-drawer.open {
+            display: flex;
+        }
+
+        .mobile-drawer a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
         /* Hero Section */
         .hero {
-            min-height: 96vh;
+            min-height: 94vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 8.5rem 1.5rem 4rem;
-            max-width: 1080px;
+            padding: 8.5rem 1.5rem 3.5rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -212,12 +313,12 @@
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            padding: 0.45rem 1.1rem;
+            padding: 0.45rem 1.15rem;
             border-radius: 999px;
             background: rgba(16, 185, 129, 0.08);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            border: 1px solid rgba(16, 185, 129, 0.35);
             color: #d1fae5;
-            font-size: 0.82rem;
+            font-size: 0.83rem;
             font-weight: 600;
             letter-spacing: 0.01em;
             margin-bottom: 1.75rem;
@@ -239,7 +340,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.6rem, 5.6vw, 4.5rem);
+            font-size: clamp(2.6rem, 5.8vw, 4.6rem);
             font-weight: 900;
             line-height: 1.08;
             letter-spacing: -0.035em;
@@ -261,9 +362,9 @@
         }
 
         .hero p {
-            font-size: clamp(1.08rem, 2vw, 1.28rem);
+            font-size: clamp(1.08rem, 2vw, 1.25rem);
             color: var(--text-muted);
-            max-width: 740px;
+            max-width: 760px;
             margin-bottom: 2.5rem;
             line-height: 1.7;
         }
@@ -278,7 +379,7 @@
             flex-wrap: wrap;
             gap: 1rem;
             justify-content: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3.25rem;
         }
 
         .btn-primary {
@@ -286,7 +387,7 @@
             color: #060911;
             font-weight: 700;
             font-size: 1rem;
-            padding: 1rem 2.1rem;
+            padding: 1rem 2.2rem;
             border-radius: 9999px;
             text-decoration: none;
             box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
@@ -325,19 +426,19 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Proof Strip */
+        /* 4. Animated Proof Strip Counters */
         .proof-strip {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.25rem;
             width: 100%;
-            max-width: 980px;
-            padding: 1.5rem 2rem;
-            background: rgba(13, 19, 33, 0.6);
+            max-width: 1020px;
+            padding: 1.6rem 2rem;
+            background: rgba(13, 19, 33, 0.65);
             border: 1px solid var(--border-glass);
             border-radius: 20px;
             backdrop-filter: blur(16px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
         }
 
         .proof-item {
@@ -352,7 +453,7 @@
 
         .proof-value {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1.65rem;
+            font-size: 1.7rem;
             font-weight: 700;
             color: var(--accent-cyan);
             line-height: 1.2;
@@ -361,8 +462,56 @@
         .proof-label {
             font-size: 0.8rem;
             color: var(--text-muted);
-            margin-top: 0.25rem;
+            margin-top: 0.35rem;
             font-weight: 500;
+        }
+
+        /* 5. Infinite Brand / Ecosystem Ticker */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            padding: 1.75rem 0;
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+            background: rgba(6, 9, 17, 0.6);
+            backdrop-filter: blur(10px);
+            margin: 2rem 0;
+        }
+
+        .ticker-label {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            gap: 2.75rem;
+            animation: tickerScroll 24s linear infinite;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .ticker-item span {
+            color: var(--accent-cyan);
+        }
+
+        @keyframes tickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         /* Section Containers */
@@ -374,7 +523,7 @@
 
         .section-header {
             text-align: center;
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto 3.5rem;
         }
 
@@ -382,14 +531,14 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.78rem;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.16em;
             color: var(--accent-cyan);
             margin-bottom: 0.75rem;
             display: inline-block;
         }
 
         .section-title {
-            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-size: clamp(2rem, 3.6vw, 2.75rem);
             font-weight: 800;
             letter-spacing: -0.03em;
             line-height: 1.15;
@@ -401,7 +550,88 @@
             font-size: 1.05rem;
         }
 
-        /* Liquid Glass Cards with 3D Tilt & Spotlight */
+        /* 6. Live Interactive AI Agent Simulator Preview */
+        .demo-panel {
+            background: rgba(13, 19, 33, 0.85);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 24px;
+            padding: 2.25rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+            margin-bottom: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .demo-terminal {
+            background: #04060c;
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.86rem;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 0.25rem;
+        }
+
+        .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .t-red { background: #ef4444; }
+        .t-yellow { background: #eab308; }
+        .t-green { background: #22c55e; }
+
+        .terminal-msg {
+            display: flex;
+            gap: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .t-bot { color: var(--accent-cyan); }
+        .t-user { color: #e2e8f0; }
+        .t-system { color: var(--accent-emerald); }
+
+        .demo-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .demo-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 0.9rem 1.25rem;
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .demo-btn:hover, .demo-btn.active {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 240, 255, 0.1);
+            color: #fff;
+            transform: translateX(4px);
+        }
+
+        /* 7. Liquid Glass Cards with 3D Tilt & Light Leak */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -430,8 +660,7 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(0, 240, 255, 0.14), inset 0 0 20px rgba(0, 240, 255, 0.05);
         }
 
-        /* Interactive Liquid Cursor Light Leak */
-        .glass-card::before, .roi-panel::before, .contact-section::before {
+        .glass-card::before, .roi-panel::before, .contact-section::before, .demo-panel::before {
             content: '';
             position: absolute;
             top: var(--y, 50%);
@@ -446,7 +675,7 @@
             z-index: 1;
         }
 
-        .glass-card:hover::before, .roi-panel:hover::before, .contact-section:hover::before {
+        .glass-card:hover::before, .roi-panel:hover::before, .contact-section:hover::before, .demo-panel:hover::before {
             opacity: 1;
         }
 
@@ -456,8 +685,8 @@
         }
 
         .card-icon {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 14px;
             background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(59, 130, 246, 0.15));
             border: 1px solid rgba(0, 240, 255, 0.3);
@@ -466,7 +695,7 @@
             justify-content: center;
             margin-bottom: 1.35rem;
             color: var(--accent-cyan);
-            font-size: 1.35rem;
+            font-size: 1.4rem;
         }
 
         .card-tag {
@@ -476,9 +705,10 @@
             color: var(--accent-cyan);
             background: rgba(0, 240, 255, 0.08);
             border: 1px solid rgba(0, 240, 255, 0.2);
-            padding: 0.2rem 0.65rem;
+            padding: 0.25rem 0.7rem;
             border-radius: 999px;
             margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
         .glass-card h3 {
@@ -505,7 +735,7 @@
         .deliverables li {
             font-size: 0.86rem;
             color: #cbd5e1;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.55rem;
             display: flex;
             align-items: center;
             gap: 0.55rem;
@@ -516,6 +746,143 @@
             color: var(--accent-cyan);
             font-size: 0.8rem;
             flex-shrink: 0;
+        }
+
+        /* 8. Modern 4-Step Process Flow */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            position: relative;
+            backdrop-filter: blur(14px);
+        }
+
+        .step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: rgba(0, 240, 255, 0.25);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: #fff;
+        }
+
+        .process-step p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* 9. Real-World Case Studies / Solutions in Action */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .case-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 22px;
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .case-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent-emerald);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        .case-metrics {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metric-col span:first-child {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .metric-col span:last-child {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* 10. Testimonials / Client Trust Cards */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .testimonial-card {
+            background: rgba(13, 19, 33, 0.55);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .client-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            color: #060911;
+            font-size: 0.9rem;
         }
 
         /* Why Businesses Switch (Comparison Section) */
@@ -661,6 +1028,102 @@
             font-size: 1rem;
             color: var(--accent-cyan);
             margin-bottom: 1.5rem;
+        }
+
+        /* 11. FAQ Accordion Section */
+        .faq-list {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 240, 255, 0.35);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.35rem 1.6rem;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+            padding: 0 1.6rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 1.35rem;
+        }
+
+        /* 12. Security & Compliance Badges Strip */
+        .security-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+            padding: 1.75rem 2rem;
+            background: rgba(13, 19, 33, 0.45);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+        }
+
+        .sec-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .sec-icon {
+            font-size: 1.5rem;
+            color: var(--accent-emerald);
+        }
+
+        .sec-text div:first-child {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #fff;
+        }
+
+        .sec-text div:last-child {
+            font-size: 0.78rem;
+            color: var(--text-muted);
         }
 
         /* Contact & Fast Quote Builder */
@@ -813,6 +1276,62 @@
             text-align: center;
         }
 
+        /* 13. Floating Live Help / Quick Booking Drawer Button */
+        .floating-chat-trigger {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 99;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #060911;
+            padding: 0.85rem 1.4rem;
+            border-radius: 999px;
+            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.45);
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+        }
+
+        .floating-chat-trigger:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 40px rgba(0, 240, 255, 0.6);
+        }
+
+        /* 14. Scroll-To-Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 99;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(13, 19, 33, 0.85);
+            border: 1px solid var(--border-glass);
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-cyan);
+        }
+
         /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
@@ -826,22 +1345,67 @@
         }
 
         footer {
-            text-align: center;
-            padding: 3.5rem 1.5rem;
+            padding: 4rem 2rem 3rem;
             border-top: 1px solid var(--border-glass);
             color: var(--text-muted);
             font-size: 0.88rem;
-            background: rgba(6, 9, 17, 0.8);
+            background: rgba(6, 9, 17, 0.85);
         }
 
-        @media (max-width: 920px) {
+        .footer-grid {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h5 {
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-bottom {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+
+        @media (max-width: 960px) {
             .proof-strip {
                 grid-template-columns: repeat(2, 1fr);
             }
             .proof-item:nth-child(2) {
                 border-right: none;
             }
-            .comparison-grid, .roi-panel, .contact-grid {
+            .comparison-grid, .roi-panel, .contact-grid, .demo-panel, .process-grid, .case-study-grid, .testimonials-grid, .security-strip, .footer-grid {
                 grid-template-columns: 1fr;
             }
             .form-row {
@@ -850,18 +1414,32 @@
             nav a:not(.nav-cta) {
                 display: none;
             }
+            .menu-toggle {
+                display: block;
+            }
+            .floating-chat-trigger span:last-child {
+                display: none;
+            }
+            .floating-chat-trigger {
+                padding: 0.85rem;
+                border-radius: 50%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Fluid Interactive Network Canvas -->
+    <!-- 1. Top Reading Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- 2. Fluid Interactive Canvas & Ambient Lighting -->
     <canvas id="fluid-canvas"></canvas>
     <div class="ambient-orb orb-1"></div>
     <div class="ambient-orb orb-2"></div>
     <div class="ambient-orb orb-3"></div>
 
     <div class="site-wrapper">
+        <!-- HEADER -->
         <header>
             <div class="header-inner">
                 <a href="#" class="logo">
@@ -870,10 +1448,26 @@
                 </a>
                 <nav>
                     <a href="#services">Solutions</a>
+                    <a href="#demo">AI Demo</a>
+                    <a href="#process">How It Works</a>
+                    <a href="#case-studies">Results</a>
                     <a href="#why-wade">Why Switch</a>
-                    <a href="#roi-calculator">ROI Calculator</a>
-                    <a href="#contact" class="nav-cta">Book Free IT & AI Audit →</a>
+                    <a href="#roi-calculator">ROI Calc</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact" class="nav-cta">Free AI Audit →</a>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
                 </nav>
+            </div>
+            <!-- Mobile Drawer -->
+            <div class="mobile-drawer" id="mobile-drawer">
+                <a href="#services" class="mobile-link">Solutions</a>
+                <a href="#demo" class="mobile-link">AI Simulator Demo</a>
+                <a href="#process" class="mobile-link">How It Works</a>
+                <a href="#case-studies" class="mobile-link">Results</a>
+                <a href="#why-wade" class="mobile-link">Why Switch</a>
+                <a href="#roi-calculator" class="mobile-link">ROI Calculator</a>
+                <a href="#faq" class="mobile-link">FAQ</a>
+                <a href="#contact" class="mobile-link" style="color:var(--accent-cyan);">Book Free Audit →</a>
             </div>
         </header>
 
@@ -898,27 +1492,98 @@
                     <span>Get a Same-Day Assessment</span>
                     <span>→</span>
                 </a>
-                <a href="#roi-calculator" class="btn-secondary">
-                    <span>Calculate Your Annual Savings</span>
+                <a href="#demo" class="btn-secondary">
+                    <span>⚡ Try Live AI Demo</span>
                 </a>
             </div>
 
+            <!-- Proof Strip with Counter Attributes -->
             <div class="proof-strip">
                 <div class="proof-item">
-                    <div class="proof-value">99.98%</div>
+                    <div class="proof-value" data-target="99.98" data-suffix="%">99.98%</div>
                     <div class="proof-label">Target Server & Network Uptime</div>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-value">&lt; 15m</div>
+                    <div class="proof-value" data-prefix="< " data-target="15" data-suffix="m">&lt; 15m</div>
                     <div class="proof-label">Critical Incident Response</div>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-value">15–30h</div>
+                    <div class="proof-value" data-target="25" data-suffix="+ hrs">25+ hrs</div>
                     <div class="proof-label">Saved Weekly via AI Workflows</div>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-value">100%</div>
+                    <div class="proof-value" data-target="100" data-suffix="%">100%</div>
                     <div class="proof-label">All Hardware Brands Supported</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ECOSYSTEM BRAND TICKER -->
+        <div class="ticker-wrap">
+            <div class="ticker-label">// Proven Integrations & Universal Hardware Compatibility</div>
+            <div class="ticker-track">
+                <div class="ticker-item"><span>✦</span> Dell PowerEdge</div>
+                <div class="ticker-item"><span>✦</span> HPE ProLiant</div>
+                <div class="ticker-item"><span>✦</span> SonicWall TZ & NSA</div>
+                <div class="ticker-item"><span>✦</span> Fortinet FortiGate</div>
+                <div class="ticker-item"><span>✦</span> Cisco Meraki</div>
+                <div class="ticker-item"><span>✦</span> Ubiquiti UniFi</div>
+                <div class="ticker-item"><span>✦</span> OpenAI & Anthropic API</div>
+                <div class="ticker-item"><span>✦</span> Microsoft 365 & Azure</div>
+                <div class="ticker-item"><span>✦</span> Google Workspace</div>
+                <div class="ticker-item"><span>✦</span> Proxmox VE & VMware</div>
+                <div class="ticker-item"><span>✦</span> Synology & TrueNAS</div>
+                <div class="ticker-item"><span>✦</span> Motorola MOTOTRBO</div>
+                <!-- Duplicate for seamless infinite loop -->
+                <div class="ticker-item"><span>✦</span> Dell PowerEdge</div>
+                <div class="ticker-item"><span>✦</span> HPE ProLiant</div>
+                <div class="ticker-item"><span>✦</span> SonicWall TZ & NSA</div>
+                <div class="ticker-item"><span>✦</span> Fortinet FortiGate</div>
+                <div class="ticker-item"><span>✦</span> Cisco Meraki</div>
+                <div class="ticker-item"><span>✦</span> Ubiquiti UniFi</div>
+                <div class="ticker-item"><span>✦</span> OpenAI & Anthropic API</div>
+                <div class="ticker-item"><span>✦</span> Microsoft 365 & Azure</div>
+            </div>
+        </div>
+
+        <!-- LIVE INTERACTIVE AI AGENT SIMULATOR -->
+        <section id="demo" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Experience It In Action</span>
+                <h2 class="section-title">See What a Custom Small Business AI Agent Does</h2>
+                <p class="section-subtitle">Click an automation scenario below to watch how our AI agents handle incoming client communications and internal ops in real time.</p>
+            </div>
+
+            <div class="demo-panel reveal">
+                <div class="demo-controls">
+                    <h3 style="font-size: 1.25rem; font-weight: 700;">Select an AI Pipeline:</h3>
+                    <button class="demo-btn active" data-scenario="lead">
+                        <span>💬 24/7 After-Hours Lead Intake & Booking</span>
+                        <span>→</span>
+                    </button>
+                    <button class="demo-btn" data-scenario="quote">
+                        <span>⚡ Instant Automated Estimate Generator</span>
+                        <span>→</span>
+                    </button>
+                    <button class="demo-btn" data-scenario="support">
+                        <span>🛡️ Server Incident Autonomous Triage</span>
+                        <span>→</span>
+                    </button>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+                        💡 Every AI workflow is private, encrypted, and customized to your exact business SOPs.
+                    </div>
+                </div>
+
+                <div class="demo-terminal">
+                    <div class="terminal-header">
+                        <span class="t-dot t-red"></span>
+                        <span class="t-dot t-yellow"></span>
+                        <span class="t-dot t-green"></span>
+                        <span style="color: #64748b; font-size: 0.76rem; margin-left: 0.5rem;">wade-ai-agent-v3.sh [live simulation]</span>
+                    </div>
+                    <div id="terminal-content">
+                        <!-- Populated by JS -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -1018,6 +1683,103 @@
             </div>
         </section>
 
+        <!-- 4-STEP MODERN PROCESS FLOW -->
+        <section id="process" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Zero Friction Onboarding</span>
+                <h2 class="section-title">How We Modernize Your Operations in 4 Steps</h2>
+                <p class="section-subtitle">No long contracts, no technical jargon. Just clear blueprints and rapid execution.</p>
+            </div>
+
+            <div class="process-grid reveal">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h4>Discovery & Workflow Audit</h4>
+                    <p>We review your current servers, network setup, and repetitive daily friction points to pinpoint where AI and IT upgrades yield the highest ROI.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h4>Architecture & AI Blueprint</h4>
+                    <p>You receive a transparent, fixed-scope proposal with exact hardware specs, automation wireframes, and expected payroll hours saved.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h4>Seamless Deployment</h4>
+                    <p>We configure servers, harden firewalls, and launch your custom AI automations in the background with zero downtime to your daily operations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">04</div>
+                    <h4>Continuous 24/7 Monitoring</h4>
+                    <p>Your systems are constantly monitored, backed up offsite, and tuned so your business runs fast, secure, and always ready to scale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDIES / RESULTS -->
+        <section id="case-studies" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Proven Client Outcomes</span>
+                <h2 class="section-title">Real Results for Real Businesses</h2>
+                <p class="section-subtitle">Here is how local businesses cut operating overhead and stopped worrying about IT breakdowns.</p>
+            </div>
+
+            <div class="case-study-grid reveal">
+                <div class="case-card">
+                    <div>
+                        <div class="case-badge">AI AUTOMATION & CRM</div>
+                        <h4 style="font-size: 1.25rem; font-weight:700; margin-bottom: 0.6rem;">Commercial Contractor</h4>
+                        <p style="font-size: 0.92rem; color: var(--text-muted);">Eliminated 18 hours/week of manual bid data entry by deploying an automated AI document extractor into their project management software.</p>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric-col">
+                            <span>18 hrs</span>
+                            <span>Saved Weekly</span>
+                        </div>
+                        <div class="metric-col">
+                            <span>&lt; 3 mins</span>
+                            <span>Bid Processing Time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div>
+                        <div class="case-badge">SERVER RESCUE & VIRTUALIZATION</div>
+                        <h4 style="font-size: 1.25rem; font-weight:700; margin-bottom: 0.6rem;">San Diego Distribution Co.</h4>
+                        <p style="font-size: 0.92rem; color: var(--text-muted);">Consolidated 4 failing legacy servers into a redundant, high-speed virtualized cluster with automated immutable cloud backups.</p>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric-col">
+                            <span>99.99%</span>
+                            <span>Uptime Maintained</span>
+                        </div>
+                        <div class="metric-col">
+                            <span>0 mins</span>
+                            <span>Data Lost During Failover</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div>
+                        <div class="case-badge">CYBERSECURITY & FIREWALL</div>
+                        <h4 style="font-size: 1.25rem; font-weight:700; margin-bottom: 0.6rem;">Regional Medical Clinic</h4>
+                        <p style="font-size: 0.92rem; color: var(--text-muted);">Upgraded aging router to enterprise SonicWall with isolated HIPAA-compliant patient/staff VLANs and zero-trust remote physician access.</p>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric-col">
+                            <span>100%</span>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="metric-col">
+                            <span>Multi-WAN</span>
+                            <span>Automatic Failover</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- WHY SWITCH COMPARISON -->
         <section id="why-wade" class="container">
             <div class="section-header reveal">
@@ -1101,19 +1863,165 @@
             </div>
         </section>
 
+        <!-- CLIENT TESTIMONIALS -->
+        <section class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Client Endorsements</span>
+                <h2 class="section-title">Trusted Across San Diego County</h2>
+                <p class="section-subtitle">What business leaders say about working directly with Wade.</p>
+            </div>
+
+            <div class="testimonials-grid reveal">
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Wade solved a recurring server crash that two previous IT firms couldn't diagnose in six months. Then he built an AI intake bot that saves our office manager 3 hours every single morning."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">MD</div>
+                        <div>
+                            <div style="font-weight:700; font-size:0.95rem; color:#fff;">Marcus D.</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Managing Director, Logistics Co.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Having one senior engineer who actually understands our entire server rack, our firewalls, and modern AI is a game-changer. No tickets, no runaround, just done right."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">ST</div>
+                        <div>
+                            <div style="font-weight:700; font-size:0.95rem; color:#fff;">Sarah T.</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Operations VP, Professional Services</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Our previous MSP insisted on forcing us onto brand-new hardware. Wade came in, tuned our existing HPE and Dell servers, locked down our firewalls, and saved us $35,000 upfront."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">RK</div>
+                        <div>
+                            <div style="font-weight:700; font-size:0.95rem; color:#fff;">Robert K.</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">President, Manufacturing & Distribution</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECURITY BADGES STRIP -->
+            <div class="security-strip reveal">
+                <div class="sec-item">
+                    <div class="sec-icon">🔒</div>
+                    <div class="sec-text">
+                        <div>Zero-Trust Security</div>
+                        <div>Military-grade VPN & encryption</div>
+                    </div>
+                </div>
+                <div class="sec-item">
+                    <div class="sec-icon">💾</div>
+                    <div class="sec-text">
+                        <div>Immutable Backups</div>
+                        <div>Ransomware-proof offsite copies</div>
+                    </div>
+                </div>
+                <div class="sec-item">
+                    <div class="sec-icon">⚡</div>
+                    <div class="sec-text">
+                        <div>Multi-WAN Failover</div>
+                        <div>Zero downtime during ISP drops</div>
+                    </div>
+                </div>
+                <div class="sec-item">
+                    <div class="sec-icon">🛡️</div>
+                    <div class="sec-text">
+                        <div>HIPAA & SOC2 Ready</div>
+                        <div>Strict compliance frameworks</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION SECTION -->
+        <section id="faq" class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">// Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Straight answers to what clients ask most often.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can AI automation actually help my small business?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Most small businesses lose 15–30 hours weekly to repetitive admin: re-typing lead data, generating basic quotes, following up with inquiries, and extracting numbers from PDFs. We build custom, private AI assistants and autonomous workflows that handle these tasks instantly, 24/7, without hiring more staff.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I have to buy all-new servers or hardware to work with you?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        No. We work on all hardware—Dell, HPE, Lenovo, Supermicro, Synology, custom whitebox builds, and legacy gear. Our philosophy is to maximize the performance, stability, and security of what you already own before recommending capital expenditures.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is our company data secure and private when using your AI automations?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, 100%. We only deploy enterprise-tier, zero-data-retention APIs and private local models where your proprietary business documents, customer communications, and financial data are never used to train public AI models.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What geographic areas do you service?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        We are based in El Cajon and provide on-site engineering across all of San Diego County (El Cajon, La Mesa, Chula Vista, Downtown, Poway, Carlsbad, Escondido) as well as remote architecture and automation deployments nationwide.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How quickly can we get started?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Right away. Submit the form below or email wade@wadewilliamswired.com. We typically schedule a 15-minute introductory discovery session the same or next business day.
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT & FAST QUOTE SECTION -->
         <section id="contact" class="container">
             <div class="section-header reveal">
                 <span class="eyebrow">// Start Your Project</span>
-                <h2 class="section-title">Ready for IT That Never Slows You Down?</h2>
-                <p class="section-subtitle">Select what you need below and send a direct request to Wade. Most inquiries receive a personal response the same business day.</p>
+                <h2 class="section-title">Ready for AI & IT That Works as Hard as You Do?</h2>
+                <p class="section-subtitle">Select what you need below and send a direct request. Most inquiries receive a personal response the same business day.</p>
             </div>
 
             <div class="contact-grid reveal">
                 <div class="contact-info-card">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">Direct Senior Support</h3>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">Direct Senior Engineering</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-                        Based in El Cajon and serving businesses across all of San Diego County & Southern California with on-site and remote engineering.
+                        Based in El Cajon and serving businesses across all of San Diego County & Southern California with on-site and remote infrastructure expertise.
                     </p>
 
                     <a href="mailto:wade@wadewilliamswired.com" class="contact-direct-item">
@@ -1143,7 +2051,7 @@
 
                 <div class="contact-section">
                     <form id="lead-form">
-                        <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.6rem; color:#cbd5e1;">1. What can Wade help you with? (Click to select)</label>
+                        <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.6rem; color:#cbd5e1;">1. What can we help you with? (Click to select)</label>
                         <div class="service-pills" id="service-pills">
                             <button type="button" class="service-pill active" data-service="Small Business AI Automation">Small Business AI Automation</button>
                             <button type="button" class="service-pill" data-service="Server & Hardware Management">Server & Hardware (All Brands)</button>
@@ -1186,13 +2094,102 @@
             </div>
         </section>
 
+        <!-- FOOTER -->
         <footer>
-            <p>&copy; 2026 Wade Williams Wired. All rights reserved. El Cajon, San Diego County, CA • High-Reliability IT Infrastructure, Cybersecurity & AI Automation.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <div class="logo-mark">W</div>
+                        <div>Wade Williams <span>Wired</span></div>
+                    </div>
+                    <p style="color:var(--text-muted); font-size:0.88rem; line-height: 1.6;">
+                        High-reliability small business AI workflow automation, full-stack server management across all hardware brands, and zero-trust cybersecurity for San Diego County.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="#services">Small Business AI</a></li>
+                        <li><a href="#services">Server & Hardware Management</a></li>
+                        <li><a href="#services">SonicWall & Firewalls</a></li>
+                        <li><a href="#services">Cloud & Storage Systems</a></li>
+                        <li><a href="#services">Radio / PoC Fleet Rentals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Service Areas</h5>
+                    <ul>
+                        <li><a href="#contact">San Diego, CA</a></li>
+                        <li><a href="#contact">El Cajon, CA</a></li>
+                        <li><a href="#contact">La Mesa & Santee</a></li>
+                        <li><a href="#contact">Chula Vista & South Bay</a></li>
+                        <li><a href="#contact">North County (Carlsbad/Poway)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Direct Contact</h5>
+                    <ul>
+                        <li><a href="mailto:wade@wadewilliamswired.com">wade@wadewilliamswired.com</a></li>
+                        <li><span style="color:var(--text-muted); font-size:0.85rem;">Mon - Fri: 8:00 AM - 6:00 PM</span></li>
+                        <li><span style="color:var(--accent-emerald); font-size:0.85rem;">● 24/7 Emergency Dispatch</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Wade Williams Wired. All rights reserved. High-Reliability IT Infrastructure & AI Automation.</div>
+                <div style="display:flex; gap:1.5rem;">
+                    <a href="#contact">Privacy</a>
+                    <a href="#contact">Terms</a>
+                    <a href="#contact">Sitemap</a>
+                </div>
+            </div>
         </footer>
     </div>
 
+    <!-- FLOATING ACTIONS: Help Button & Back-To-Top -->
+    <a href="#contact" class="floating-chat-trigger" title="Quick Audit Request">
+        <span>⚡</span>
+        <span>Book Free AI Audit</span>
+    </a>
+    <button id="back-to-top" title="Scroll to top">↑</button>
+
     <script>
-        // 1. Interactive Fluid Network & Particle Canvas
+        // 1. Reading Scroll Progress Bar
+        const progressBar = document.getElementById('scroll-progress');
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+
+            if (scrollTop > 450) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 2. Mobile Drawer Navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        menuToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileDrawer.classList.remove('open'));
+        });
+
+        // 3. Interactive Fluid Network & Particle Canvas
         const canvas = document.getElementById('fluid-canvas');
         const ctx = canvas.getContext('2d');
         let width, height, particles = [];
@@ -1227,7 +2224,6 @@
         function animateCanvas() {
             ctx.clearRect(0, 0, width, height);
 
-            // Soft cursor fluid glow on canvas
             if (mouse.x > 0) {
                 const grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
                 grad.addColorStop(0, 'rgba(0, 240, 255, 0.08)');
@@ -1244,7 +2240,6 @@
                 if (p.x < 0 || p.x > width) p.vx *= -1;
                 if (p.y < 0 || p.y > height) p.vy *= -1;
 
-                // Fluid mouse repulsion / attraction
                 const dx = mouse.x - p.x;
                 const dy = mouse.y - p.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
@@ -1279,8 +2274,63 @@
         resizeCanvas();
         animateCanvas();
 
-        // 2. Liquid Cursor Light Leak + Subtle 3D Tilt on Cards
-        document.querySelectorAll('.glass-card, .roi-panel, .contact-section').forEach(card => {
+        // 4. Interactive Live AI Agent Terminal Simulator
+        const terminalContent = document.getElementById('terminal-content');
+        const demoScenarios = {
+            lead: [
+                { role: 'user', text: '[Website Form] "Hi, we have 18 computers in La Mesa and need our servers backed up. Are you available?"' },
+                { role: 'bot', text: '✦ AI Agent: Lead qualified (18 endpoints, On-Site La Mesa). Syncing with CRM...' },
+                { role: 'system', text: '✓ Verified: Customer record created in HubSpot/QuickBooks.' },
+                { role: 'bot', text: '✦ AI Agent: Sending calendar booking link + tailored IT backup proposal to lead (Elapsed: 4.2s).' },
+                { role: 'system', text: '✓ Appointment confirmed for tomorrow 10:00 AM. Wade notified via SMS.' }
+            ],
+            quote: [
+                { role: 'user', text: '[Email Inbound] Attached: floorplan_warehouse.pdf ("Need Cat6A lines + 12 commercial radios")' },
+                { role: 'bot', text: '✦ AI Agent: Parsing PDF attachment via OCR & hardware pricing engine...' },
+                { role: 'system', text: '✓ Line Items: 12x Motorola MOTOTRBO radios + 24 drops generated.' },
+                { role: 'bot', text: '✦ AI Agent: Pre-drafted branded PDF quote #2026-118 ready for Wade\'s 1-click approval.' },
+                { role: 'system', text: '✓ Quote dispatched to client in 32 seconds.' }
+            ],
+            support: [
+                { role: 'system', text: '⚠️ Telemetry Alert: Server #02 (HPE ProLiant) drive RAID degraded.' },
+                { role: 'bot', text: '✦ AI Diagnostic: Disk 3 (SAS 1.2TB) predictive failure sector threshold exceeded.' },
+                { role: 'system', text: '✓ Autonomous hot-spare drive rebuilt automatically.' },
+                { role: 'bot', text: '✦ AI Agent: Created RMA replacement dispatch ticket + verified zero data loss.' },
+                { role: 'system', text: '✓ Client notified: Incident remediated with zero user downtime.' }
+            ]
+        };
+
+        function renderTerminalScenario(key) {
+            terminalContent.innerHTML = '';
+            const steps = demoScenarios[key];
+            steps.forEach((step, idx) => {
+                setTimeout(() => {
+                    const row = document.createElement('div');
+                    row.className = 'terminal-msg';
+                    if (step.role === 'user') {
+                        row.innerHTML = `<span class="t-user">${step.text}</span>`;
+                    } else if (step.role === 'bot') {
+                        row.innerHTML = `<span class="t-bot">${step.text}</span>`;
+                    } else {
+                        row.innerHTML = `<span class="t-system">${step.text}</span>`;
+                    }
+                    terminalContent.appendChild(row);
+                }, idx * 450);
+            });
+        }
+
+        renderTerminalScenario('lead');
+
+        document.querySelectorAll('.demo-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.demo-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderTerminalScenario(btn.dataset.scenario);
+            });
+        });
+
+        // 5. Card 3D Perspective Tilt + Specular Cursor Light Leak
+        document.querySelectorAll('.glass-card, .roi-panel, .contact-section, .demo-panel').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -1302,18 +2352,44 @@
             });
         });
 
-        // 3. Scroll Reveal Observer
+        // 6. Scroll Reveal Observer & Proof Number Counter Animation
+        let counted = false;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+
+                    // If proof strip comes into view, animate numbers
+                    if (entry.target.classList.contains('proof-strip') && !counted) {
+                        counted = true;
+                        animateCounters();
+                    }
                 }
             });
         }, { threshold: 0.12 });
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal, .proof-strip').forEach(el => observer.observe(el));
 
-        // 4. Interactive ROI Calculator
+        function animateCounters() {
+            document.querySelectorAll('.proof-value[data-target]').forEach(counter => {
+                const target = parseFloat(counter.dataset.target);
+                const prefix = counter.dataset.prefix || '';
+                const suffix = counter.dataset.suffix || '';
+                let current = 0;
+                const step = target / 40;
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = prefix + target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = prefix + (target % 1 === 0 ? Math.floor(current) : current.toFixed(2)) + suffix;
+                    }
+                }, 30);
+            });
+        }
+
+        // 7. Interactive ROI Calculator
         const teamSlider = document.getElementById('team-slider');
         const hoursSlider = document.getElementById('hours-slider');
         const rateSlider = document.getElementById('rate-slider');
@@ -1332,7 +2408,6 @@
             hoursVal.textContent = `${hours} hrs/wk`;
             rateVal.textContent = `$${rate} / hr`;
 
-            // 60% reclaim factor across 50 working weeks
             const reclaimedHours = Math.round(team * hours * 50 * 0.6);
             const reclaimedDollars = Math.round(reclaimedHours * rate);
 
@@ -1343,7 +2418,17 @@
         [teamSlider, hoursSlider, rateSlider].forEach(s => s.addEventListener('input', updateROI));
         updateROI();
 
-        // 5. Interactive Service Selector & Lead Form Handler
+        // 8. FAQ Accordion Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // 9. Interactive Service Pills & Lead Form Submission
         const selectedServices = new Set(['Small Business AI Automation']);
         document.querySelectorAll('.service-pill').forEach(pill => {
             pill.addEventListener('click', () => {
@@ -1360,7 +2445,7 @@
 
         document.getElementById('apply-roi-btn').addEventListener('click', () => {
             const msgBox = document.getElementById('message');
-            msgBox.value = `We have ~${teamSlider.value} team members and want to explore reclaiming ${roiHours.textContent} (${roiDollars.textContent}/yr) through IT optimization and AI automation.`;
+            msgBox.value = `We have ~${teamSlider.value} team members and want to explore reclaiming ${roiHours.textContent} (${roiDollars.textContent}/yr) through small business AI automation and IT optimization.`;
         });
 
         document.getElementById('lead-form').addEventListener('submit', e => {
