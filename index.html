@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wadewilliamswired.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#060911">
+    <meta name="theme-color" content="#070c18">
 
     <!-- JSON-LD LocalBusiness & ProfessionalService Schema -->
     <script type="application/ld+json">
@@ -57,17 +57,17 @@
     
     <style>
         :root {
-            --bg-deep: #060911;
-            --bg-surface: rgba(13, 19, 33, 0.72);
+            --bg-deep: #070d1a;
+            --bg-surface: rgba(15, 23, 42, 0.75);
             --bg-card: rgba(255, 255, 255, 0.035);
             --bg-card-hover: rgba(255, 255, 255, 0.065);
             --border-glass: rgba(255, 255, 255, 0.09);
-            --border-glow: rgba(0, 240, 255, 0.45);
+            --border-glow: rgba(56, 189, 248, 0.45);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --accent-cyan: #00f0ff;
-            --accent-blue: #3b82f6;
-            --accent-indigo: #6366f1;
+            --accent-blue-bright: #38bdf8;
+            --accent-blue: #2563eb;
+            --accent-cobalt: #1d4ed8;
             --accent-emerald: #10b981;
             --accent-amber: #f59e0b;
             --danger-red: #f43f5e;
@@ -101,7 +101,7 @@
             left: 0;
             height: 3px;
             width: 0%;
-            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-indigo));
+            background: linear-gradient(90deg, var(--accent-blue-bright), var(--accent-blue), var(--accent-indigo));
             z-index: 1000;
             transition: width 0.1s linear;
         }
@@ -132,7 +132,7 @@
         .orb-1 {
             width: 520px;
             height: 520px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.28), transparent 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.28), transparent 70%);
             top: -120px;
             left: -100px;
         }
@@ -205,17 +205,17 @@
             width: 36px;
             height: 36px;
             border-radius: 10px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             display: grid;
             place-items: center;
             color: #060911;
             font-weight: 900;
             font-size: 1rem;
-            box-shadow: 0 0 22px rgba(0, 240, 255, 0.45);
+            box-shadow: 0 0 22px rgba(56, 189, 248, 0.45);
         }
 
         .logo span {
-            background: linear-gradient(90deg, var(--accent-cyan), #60a5fa);
+            background: linear-gradient(90deg, var(--accent-blue-bright), #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -235,13 +235,13 @@
         }
 
         nav a:hover {
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
         }
 
         .nav-cta {
-            background: rgba(0, 240, 255, 0.1);
-            border: 1px solid rgba(0, 240, 255, 0.35);
-            color: var(--accent-cyan) !important;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: var(--accent-blue-bright) !important;
             padding: 0.55rem 1.15rem;
             border-radius: 999px;
             font-weight: 600;
@@ -252,9 +252,9 @@
         }
 
         .nav-cta:hover {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             color: #060911 !important;
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
             transform: translateY(-1px);
         }
 
@@ -349,7 +349,7 @@
         }
 
         .hero h1 .fluid-gradient {
-            background: linear-gradient(90deg, #00f0ff, #60a5fa, #a855f7, #00f0ff);
+            background: linear-gradient(90deg, #38bdf8, #60a5fa, #a855f7, #38bdf8);
             background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -383,14 +383,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             color: #060911;
             font-weight: 700;
             font-size: 1rem;
             padding: 1rem 2.2rem;
             border-radius: 9999px;
             text-decoration: none;
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
             transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
             display: inline-flex;
             align-items: center;
@@ -401,7 +401,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 0 45px rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 45px rgba(56, 189, 248, 0.6);
         }
 
         .btn-secondary {
@@ -421,8 +421,8 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(0, 240, 255, 0.08);
+            border-color: var(--accent-blue-bright);
+            background: rgba(56, 189, 248, 0.08);
             transform: translateY(-2px);
         }
 
@@ -455,7 +455,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.7rem;
             font-weight: 700;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             line-height: 1.2;
         }
 
@@ -506,7 +506,7 @@
         }
 
         .ticker-item span {
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
         }
 
         @keyframes tickerScroll {
@@ -532,7 +532,7 @@
             font-size: 0.78rem;
             text-transform: uppercase;
             letter-spacing: 0.16em;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             margin-bottom: 0.75rem;
             display: inline-block;
         }
@@ -553,7 +553,7 @@
         /* 6. Live Interactive AI Agent Simulator Preview */
         .demo-panel {
             background: rgba(13, 19, 33, 0.85);
-            border: 1px solid rgba(0, 240, 255, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.3);
             border-radius: 24px;
             padding: 2.25rem;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
@@ -598,7 +598,7 @@
             line-height: 1.5;
         }
 
-        .t-bot { color: var(--accent-cyan); }
+        .t-bot { color: var(--accent-blue-bright); }
         .t-user { color: #e2e8f0; }
         .t-system { color: var(--accent-emerald); }
 
@@ -625,8 +625,8 @@
         }
 
         .demo-btn:hover, .demo-btn.active {
-            border-color: var(--accent-cyan);
-            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--accent-blue-bright);
+            background: rgba(56, 189, 248, 0.1);
             color: #fff;
             transform: translateX(4px);
         }
@@ -657,7 +657,7 @@
 
         .glass-card:hover {
             border-color: var(--border-glow);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(0, 240, 255, 0.14), inset 0 0 20px rgba(0, 240, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(56, 189, 248, 0.14), inset 0 0 20px rgba(56, 189, 248, 0.05);
         }
 
         .glass-card::before, .roi-panel::before, .contact-section::before, .demo-panel::before {
@@ -668,7 +668,7 @@
             transform: translate(-50%, -50%);
             width: 380px;
             height: 380px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.16) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%);
             opacity: 0;
             transition: opacity 0.35s ease;
             pointer-events: none;
@@ -688,13 +688,13 @@
             width: 50px;
             height: 50px;
             border-radius: 14px;
-            background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(59, 130, 246, 0.15));
-            border: 1px solid rgba(0, 240, 255, 0.3);
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(59, 130, 246, 0.15));
+            border: 1px solid rgba(56, 189, 248, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.35rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             font-size: 1.4rem;
         }
 
@@ -702,9 +702,9 @@
             display: inline-block;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.72rem;
-            color: var(--accent-cyan);
-            background: rgba(0, 240, 255, 0.08);
-            border: 1px solid rgba(0, 240, 255, 0.2);
+            color: var(--accent-blue-bright);
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             padding: 0.25rem 0.7rem;
             border-radius: 999px;
             margin-bottom: 0.75rem;
@@ -743,7 +743,7 @@
 
         .deliverables li::before {
             content: "✦";
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             font-size: 0.8rem;
             flex-shrink: 0;
         }
@@ -769,7 +769,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 2.2rem;
             font-weight: 800;
-            color: rgba(0, 240, 255, 0.25);
+            color: rgba(56, 189, 248, 0.25);
             margin-bottom: 0.5rem;
         }
 
@@ -828,7 +828,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.35rem;
             font-weight: 700;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
         }
 
         .metric-col span:last-child {
@@ -877,7 +877,7 @@
             width: 42px;
             height: 42px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-bright));
             display: grid;
             place-items: center;
             font-weight: 800;
@@ -905,9 +905,9 @@
         }
 
         .comp-good {
-            background: linear-gradient(160deg, rgba(0, 240, 255, 0.09), rgba(59, 130, 246, 0.06));
-            border: 1px solid rgba(0, 240, 255, 0.4);
-            box-shadow: 0 0 40px rgba(0, 240, 255, 0.12);
+            background: linear-gradient(160deg, rgba(56, 189, 248, 0.09), rgba(59, 130, 246, 0.06));
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.12);
             position: relative;
         }
 
@@ -915,7 +915,7 @@
             position: absolute;
             top: -13px;
             right: 24px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             color: #060911;
             font-size: 0.74rem;
             font-weight: 800;
@@ -946,7 +946,7 @@
         /* Interactive ROI & Automation Calculator */
         .roi-panel {
             background: linear-gradient(145deg, rgba(13, 19, 33, 0.85), rgba(20, 30, 52, 0.65));
-            border: 1px solid rgba(0, 240, 255, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.25);
             border-radius: 26px;
             padding: 3rem;
             position: relative;
@@ -977,7 +977,7 @@
 
         .slider-val {
             font-family: 'JetBrains Mono', monospace;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
         }
 
         input[type="range"] {
@@ -996,8 +996,8 @@
             width: 22px;
             height: 22px;
             border-radius: 50%;
-            background: var(--accent-cyan);
-            box-shadow: 0 0 15px var(--accent-cyan);
+            background: var(--accent-blue-bright);
+            box-shadow: 0 0 15px var(--accent-blue-bright);
             cursor: pointer;
             transition: transform 0.15s ease;
         }
@@ -1008,7 +1008,7 @@
 
         .roi-result-box {
             background: rgba(6, 9, 17, 0.75);
-            border: 1px solid rgba(0, 240, 255, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.3);
             border-radius: 20px;
             padding: 2.25rem;
             text-align: center;
@@ -1026,7 +1026,7 @@
         .roi-hours-saved {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             margin-bottom: 1.5rem;
         }
 
@@ -1048,7 +1048,7 @@
         }
 
         .faq-item:hover {
-            border-color: rgba(0, 240, 255, 0.35);
+            border-color: rgba(56, 189, 248, 0.35);
         }
 
         .faq-question {
@@ -1069,7 +1069,7 @@
 
         .faq-icon {
             font-size: 1.25rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             transition: transform 0.25s ease;
         }
 
@@ -1157,7 +1157,7 @@
         }
 
         .contact-direct-item:hover {
-            border-color: var(--accent-cyan);
+            border-color: var(--accent-blue-bright);
             transform: translateX(4px);
         }
 
@@ -1198,10 +1198,10 @@
         }
 
         .service-pill.active, .service-pill:hover {
-            background: rgba(0, 240, 255, 0.14);
-            border-color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.14);
+            border-color: var(--accent-blue-bright);
             color: #fff;
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
         }
 
         .form-row {
@@ -1236,8 +1236,8 @@
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 18px rgba(0, 240, 255, 0.2);
+            border-color: var(--accent-blue-bright);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.2);
         }
 
         .form-group textarea {
@@ -1247,7 +1247,7 @@
 
         .submit-btn {
             width: 100%;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             color: #060911;
             font-weight: 800;
             padding: 1.05rem;
@@ -1255,13 +1255,13 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            box-shadow: 0 0 28px rgba(0, 240, 255, 0.3);
+            box-shadow: 0 0 28px rgba(56, 189, 248, 0.3);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 40px rgba(0, 240, 255, 0.55);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.55);
         }
 
         .form-feedback {
@@ -1282,11 +1282,11 @@
             bottom: 24px;
             right: 24px;
             z-index: 99;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(135deg, var(--accent-blue-bright), var(--accent-blue));
             color: #060911;
             padding: 0.85rem 1.4rem;
             border-radius: 999px;
-            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.45);
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.45);
             font-weight: 700;
             font-size: 0.92rem;
             text-decoration: none;
@@ -1298,7 +1298,7 @@
 
         .floating-chat-trigger:hover {
             transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 12px 40px rgba(0, 240, 255, 0.6);
+            box-shadow: 0 12px 40px rgba(56, 189, 248, 0.6);
         }
 
         /* 14. Scroll-To-Top Button */
@@ -1312,7 +1312,7 @@
             border-radius: 50%;
             background: rgba(13, 19, 33, 0.85);
             border: 1px solid var(--border-glass);
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
             font-size: 1.2rem;
             display: grid;
             place-items: center;
@@ -1329,7 +1329,7 @@
 
         #back-to-top:hover {
             transform: translateY(-3px);
-            border-color: var(--accent-cyan);
+            border-color: var(--accent-blue-bright);
         }
 
         /* Scroll Reveal Animation */
@@ -1384,7 +1384,7 @@
         }
 
         .footer-col a:hover {
-            color: var(--accent-cyan);
+            color: var(--accent-blue-bright);
         }
 
         .footer-bottom {
@@ -1467,7 +1467,7 @@
                 <a href="#why-wade" class="mobile-link">Why Switch</a>
                 <a href="#roi-calculator" class="mobile-link">ROI Calculator</a>
                 <a href="#faq" class="mobile-link">FAQ</a>
-                <a href="#contact" class="mobile-link" style="color:var(--accent-cyan);">Book Free Audit →</a>
+                <a href="#contact" class="mobile-link" style="color:var(--accent-blue-bright);">Book Free Audit →</a>
             </div>
         </header>
 
@@ -1804,11 +1804,11 @@
                     <span class="comp-badge">Direct Senior Engineering</span>
                     <h3 style="color: #fff; font-size: 1.35rem;">Wade Williams Wired</h3>
                     <ul class="comp-list">
-                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Direct access to Wade:</strong> Speak straight to the senior architect who built and knows your stack.</span></li>
-                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>We work on ALL hardware:</strong> Servers, NAS, firewalls, switches, and custom rigs—any brand, new or legacy.</span></li>
-                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Showroom-clean racks:</strong> Labeled, tested, and documented infrastructure you can be proud of.</span></li>
-                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>ROI-driven AI automation:</strong> Custom workflows that save 15–30+ payroll hours every week.</span></li>
-                        <li><span style="color: var(--accent-cyan);">✓</span> <span><strong>Transparent pricing:</strong> Clear project scopes or predictable retainers tailored to your exact footprint.</span></li>
+                        <li><span style="color: var(--accent-blue-bright);">✓</span> <span><strong>Direct access to Wade:</strong> Speak straight to the senior architect who built and knows your stack.</span></li>
+                        <li><span style="color: var(--accent-blue-bright);">✓</span> <span><strong>We work on ALL hardware:</strong> Servers, NAS, firewalls, switches, and custom rigs—any brand, new or legacy.</span></li>
+                        <li><span style="color: var(--accent-blue-bright);">✓</span> <span><strong>Showroom-clean racks:</strong> Labeled, tested, and documented infrastructure you can be proud of.</span></li>
+                        <li><span style="color: var(--accent-blue-bright);">✓</span> <span><strong>ROI-driven AI automation:</strong> Custom workflows that save 15–30+ payroll hours every week.</span></li>
+                        <li><span style="color: var(--accent-blue-bright);">✓</span> <span><strong>Transparent pricing:</strong> Clear project scopes or predictable retainers tailored to your exact footprint.</span></li>
                     </ul>
                 </div>
             </div>
@@ -2028,7 +2028,7 @@
                         <div class="card-icon" style="margin-bottom: 0; width: 42px; height: 42px;">✉️</div>
                         <div>
                             <div style="font-size: 0.78rem; color: var(--text-muted);">Direct Email</div>
-                            <div style="font-weight: 700; color: var(--accent-cyan);">wade@wadewilliamswired.com</div>
+                            <div style="font-weight: 700; color: var(--accent-blue-bright);">wade@wadewilliamswired.com</div>
                         </div>
                     </a>
 
@@ -2226,7 +2226,7 @@
 
             if (mouse.x > 0) {
                 const grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
-                grad.addColorStop(0, 'rgba(0, 240, 255, 0.08)');
+                grad.addColorStop(0, 'rgba(56, 189, 248, 0.08)');
                 grad.addColorStop(1, 'transparent');
                 ctx.fillStyle = grad;
                 ctx.fillRect(0, 0, width, height);
@@ -2251,7 +2251,7 @@
 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(0, 240, 255, 0.55)';
+                ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
                 ctx.fill();
 
                 for (let j = i + 1; j < particles.length; j++) {
@@ -2466,7 +2466,7 @@
 
             const feedback = document.getElementById('form-feedback');
             feedback.style.display = 'block';
-            feedback.innerHTML = `✓ Opening your email client addressed to <strong>wade@wadewilliamswired.com</strong>! If it didn't open automatically, email <a href="mailto:wade@wadewilliamswired.com" style="color:var(--accent-cyan);">wade@wadewilliamswired.com</a> directly.`;
+            feedback.innerHTML = `✓ Opening your email client addressed to <strong>wade@wadewilliamswired.com</strong>! If it didn't open automatically, email <a href="mailto:wade@wadewilliamswired.com" style="color:var(--accent-blue-bright);">wade@wadewilliamswired.com</a> directly.`;
         });
     </script>
 </body>
