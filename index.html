@@ -6,61 +6,165 @@
     <title>Wade Williams Wired | AI Workflow Automation & Website Building for Small Business — San Diego</title>
     <meta name="description" content="Wade Williams Wired builds AI workflow and admin automations and fast, mobile-first websites for small businesses in San Diego County. Free assessment — based in El Cajon, CA.">
     <meta name="referrer-policy" content="strict-origin-when-cross-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#070c18">
     <link rel="canonical" href="https://wadewilliamswired.com/">
 
+    <!-- Favicon & Web App Manifest -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Wade Williams Wired | AI Workflow Automation & Website Building">
-    <meta property="og:description" content="Practical AI automations that capture leads and eliminate busywork — plus fast, mobile-first websites built for small business.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wadewilliamswired.com/">
-    <meta name="twitter:card" content="summary">
-    <meta name="theme-color" content="#070c18">
+    <meta property="og:site_name" content="Wade Williams Wired">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Wade Williams Wired | AI Workflow Automation & Website Building">
+    <meta property="og:description" content="Practical AI automations that capture leads and eliminate busywork — plus fast, mobile-first websites built for small business in San Diego.">
+    <meta property="og:image" content="https://wadewilliamswired.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wade Williams Wired - AI Workflow Automation & Website Building for Small Business">
 
-    <!-- Structured data -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wadewilliamswired.com/">
+    <meta name="twitter:title" content="Wade Williams Wired | AI Workflow Automation & Website Building">
+    <meta name="twitter:description" content="Practical AI automations that capture leads and eliminate busywork — plus fast, mobile-first websites built for small business in San Diego.">
+    <meta name="twitter:image" content="https://wadewilliamswired.com/og-image.png">
+
+    <!-- Structured data: LocalBusiness + FAQPage schemas -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Wade Williams Wired",
-      "description": "Wade Williams Wired builds AI workflow and admin automations and fast, mobile-first websites for small businesses in San Diego County.",
-      "url": "https://wadewilliamswired.com",
-      "email": "waderaid@hotmail.com",
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://wadewilliamswired.com/#business",
+        "name": "Wade Williams Wired",
+        "description": "Wade Williams Wired builds AI workflow and admin automations and fast, mobile-first websites for small businesses in San Diego County.",
+        "url": "https://wadewilliamswired.com",
+        "image": "https://wadewilliamswired.com/og-image.png",
+        "email": "waderaid@hotmail.com",
+        "priceRange": "$$",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card, Check, Invoice, Bank Transfer",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "El Cajon",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 32.7948,
+          "longitude": -116.9625
+        },
+        "areaServed": [
+          "San Diego", "El Cajon", "La Mesa", "Chula Vista", "Santee", "Poway", "Escondido", "Carlsbad", "Southern California"
+        ],
+        "knowsAbout": [
+          "Small Business AI Automation",
+          "AI Workflow Automation",
+          "Admin Automation",
+          "Website Design",
+          "Website Development",
+          "Small Business Websites"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI Automation & Website Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Workflow & Admin Automation",
+                "description": "Custom autonomous workflows for after-hours lead intake, quote drafting, invoice follow-ups, appointment reminders, and email triage."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Building",
+                "description": "Fast, conversion-focused mobile-first websites engineered for small businesses with direct email form wiring and local search optimization."
+              }
+            }
+          ]
+        }
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "El Cajon",
-        "addressRegion": "CA",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 32.7948,
-        "longitude": -116.9625
-      },
-      "areaServed": [
-        "San Diego", "El Cajon", "La Mesa", "Chula Vista", "Santee", "Poway", "Escondido", "Carlsbad", "Southern California"
-      ],
-      "knowsAbout": [
-        "Small Business AI Automation",
-        "AI Workflow Automation",
-        "Admin Automation",
-        "Website Design",
-        "Website Development",
-        "Small Business Websites"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can AI automation actually help my small business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most small businesses lose 15–30 hours weekly to repetitive admin: re-typing lead data, generating basic quotes, following up with inquiries, and extracting numbers from PDFs. We build custom, private AI assistants and autonomous workflows that handle these tasks instantly, 24/7, without hiring more staff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a website from you include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A mobile-first site built around your business: home, services, about, and contact pages, forms that email you directly, and local search basics so customers nearby can find you. You approve the design and every word before launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to get a website or automation live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the size of the project and how quickly content is ready. You’ll get a clear launch date in your proposal before any work starts — most small projects move from discovery call to launch in a matter of weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is our company data secure and private when using your AI automations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We only deploy enterprise-tier, zero-data-retention APIs and private local models where your proprietary business documents, customer communications, and financial data are never used to train public AI models."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What geographic areas do you service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are based in El Cajon and work on-site across all of San Diego County (El Cajon, La Mesa, Chula Vista, Santee, Poway, Carlsbad, Escondido), and we build automations and websites for small businesses anywhere in the U.S. remotely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can we get started?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Right away. Submit the form below or email waderaid@hotmail.com. We typically schedule a 15-minute introductory discovery session the same or next business day."
+            }
+          }
+        ]
+      }
+    ]
     </script>
 
-    <!-- Fonts -->
+    <!-- Fonts: Asynchronously loaded to eliminate render blocking while retaining font-display: swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap">
+    </noscript>
 
     <style>
         :root {
@@ -95,6 +199,30 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.18) var(--bg-deep);
+        }
+
+        /* Custom subtle dark scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 5px;
+            border: 2px solid var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(56, 189, 248, 0.45);
+        }
+
+        ::selection {
+            background: rgba(56, 189, 248, 0.35);
+            color: #ffffff;
         }
 
         img, svg, video { max-width: 100%; height: auto; }
@@ -142,6 +270,8 @@
             z-index: 0;
             opacity: 0.35;
             animation: floatOrb 18s ease-in-out infinite alternate;
+            will-change: transform;
+            transform: translateZ(0);
         }
         .orb-1 { width: 420px; height: 420px; background: #1d4ed8; top: -120px; left: -120px; }
         .orb-2 { width: 380px; height: 380px; background: #0ea5e9; bottom: -140px; right: -100px; animation-delay: -9s; }
@@ -323,7 +453,9 @@
             text-decoration: none;
             cursor: pointer;
             border: 1px solid transparent;
+            transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
+        .btn-primary:active, .btn-secondary:active { transform: scale(0.98); }
         .btn-primary {
             background: linear-gradient(135deg, var(--accent-cobalt), var(--accent-blue-bright));
             color: #fff;
@@ -390,8 +522,10 @@
             font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
         }
         .demo-btn:hover { background: var(--bg-card-hover); }
+        .demo-btn:active { transform: scale(0.99); }
         .demo-btn.active {
             border-color: var(--border-glow);
             background: rgba(56, 189, 248, 0.12);
@@ -412,7 +546,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.07);
             font-family: 'JetBrains Mono', ui-monospace, monospace;
             font-size: 0.75rem;
-            color: #64748b;
+            color: #94a3b8;
         }
         .t-dot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 11px; }
         .t-red { background: #f43f5e; }
@@ -656,7 +790,7 @@
             font-size: 1rem;
         }
         .form-group textarea { min-height: 120px; resize: vertical; }
-        .form-group input::placeholder, .form-group textarea::placeholder { color: #64748b; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: #94a3b8; }
         .form-group input:focus, .form-group textarea:focus {
             outline: 3px solid var(--focus-ring);
             outline-offset: 1px;
@@ -673,8 +807,11 @@
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
+            transition: filter 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
         }
         .submit-btn:hover { filter: brightness(1.1); }
+        .submit-btn:active { transform: scale(0.99); }
+        .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
         .form-feedback {
             display: none;
             margin-top: 1rem;
@@ -704,7 +841,14 @@
             margin-top: 2rem;
         }
         .footer-grid { display: grid; gap: 2rem; }
-        .footer-col h5 { margin: 0 0 0.9rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .footer-col .footer-title, .footer-col h5 {
+            margin: 0 0 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-main);
+        }
         .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
         .footer-col a {
             color: var(--text-muted);
@@ -1137,7 +1281,7 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Your Name *</label>
-                                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe">
+                                    <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" placeholder="Jane Doe">
                                 </div>
                                 <div class="form-group">
                                     <label for="company">Company / Organization</label>
@@ -1148,20 +1292,20 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="email">Work Email *</label>
-                                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com">
+                                    <input type="email" id="email" name="email" required aria-required="true" inputmode="email" autocomplete="email" placeholder="you@company.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number (Optional)</label>
-                                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Best number to reach you">
+                                    <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="Best number to reach you">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Project Details *</label>
-                                <textarea id="message" name="message" required placeholder="Tell me about the manual work you want automated, or the website you need..."></textarea>
+                                <textarea id="message" name="message" required aria-required="true" placeholder="Tell me about the manual work you want automated, or the website you need..."></textarea>
                             </div>
 
-                            <button type="submit" class="submit-btn">Send Request to Wade →</button>
+                            <button type="submit" id="submit-btn" class="submit-btn">Send Request to Wade →</button>
                             <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
                             <p class="form-alt">Prefer email? Write to <a href="mailto:waderaid@hotmail.com">waderaid@hotmail.com</a> directly.</p>
                         </form>
@@ -1183,7 +1327,7 @@
                     </div>
 
                     <div class="footer-col">
-                        <h5>Services</h5>
+                        <h3 class="footer-title">Services</h3>
                         <ul>
                             <li><a href="#services">AI Workflow &amp; Admin Automation</a></li>
                             <li><a href="#services">Website Building</a></li>
@@ -1191,7 +1335,7 @@
                     </div>
 
                     <div class="footer-col">
-                        <h5>Service Areas</h5>
+                        <h3 class="footer-title">Service Areas</h3>
                         <ul>
                             <li><a href="#contact">San Diego, CA</a></li>
                             <li><a href="#contact">El Cajon, CA</a></li>
@@ -1202,7 +1346,7 @@
                     </div>
 
                     <div class="footer-col">
-                        <h5>Direct Contact</h5>
+                        <h3 class="footer-title">Direct Contact</h3>
                         <ul>
                             <li><a href="mailto:waderaid@hotmail.com">waderaid@hotmail.com</a></li>
                             <li><span style="color:var(--text-muted); font-size:0.85rem;">Mon – Fri: 8:00 AM – 6:00 PM</span></li>
@@ -1229,16 +1373,33 @@
 
         var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        /* 1. Back-to-top button */
+        /* 1. Back-to-top button with IntersectionObserver + requestAnimationFrame fallback */
         var backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', function () {
-            var scrollTop = window.scrollY || document.documentElement.scrollTop;
-            if (scrollTop > 450) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        }, { passive: true });
+        var heroSection = document.querySelector('.hero');
+        if ('IntersectionObserver' in window && heroSection) {
+            var bttObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        backToTop.classList.remove('visible');
+                    } else {
+                        backToTop.classList.add('visible');
+                    }
+                });
+            }, { rootMargin: '0px 0px -200px 0px', threshold: 0 });
+            bttObserver.observe(heroSection);
+        } else {
+            var scrollTicking = false;
+            window.addEventListener('scroll', function () {
+                if (!scrollTicking) {
+                    window.requestAnimationFrame(function () {
+                        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+                        backToTop.classList.toggle('visible', scrollTop > 450);
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }, { passive: true });
+        }
 
         backToTop.addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
@@ -1247,96 +1408,131 @@
         /* 2. Mobile drawer navigation */
         var menuToggle = document.getElementById('menu-toggle');
         var mobileDrawer = document.getElementById('mobile-drawer');
+        var closeDrawer = function () {
+            mobileDrawer.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        };
         menuToggle.addEventListener('click', function () {
             var isOpen = mobileDrawer.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
         document.querySelectorAll('.mobile-link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                mobileDrawer.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open navigation menu');
-            });
+            link.addEventListener('click', closeDrawer);
         });
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
-                mobileDrawer.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
+                closeDrawer();
                 menuToggle.focus();
             }
         });
+        document.addEventListener('click', function (e) {
+            if (mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !menuToggle.contains(e.target)) {
+                closeDrawer();
+            }
+        });
 
-        /* 3. Lightweight ambient particle canvas (skipped for reduced motion) */
+        /* 3. Lightweight ambient particle canvas (optimized for battery and CPU) */
         var canvas = document.getElementById('fluid-canvas');
         if (!prefersReducedMotion && canvas && canvas.getContext) {
             var ctx = canvas.getContext('2d');
             var width = 0, height = 0, particles = [], rafId = null;
+            var isMobile = window.innerWidth < 768;
             var mouse = { x: -1000, y: -1000, radius: 180 };
+            var mouseRadiusSq = 180 * 180;
+            var maxDist = 140;
+            var maxDistSq = maxDist * maxDist;
 
             var initParticles = function () {
-                var count = Math.min(Math.floor((width * height) / 22000), 45);
+                isMobile = width < 768;
+                var maxCount = isMobile ? 18 : 38;
+                var count = Math.min(Math.floor((width * height) / 26000), maxCount);
                 particles = [];
                 for (var i = 0; i < count; i++) {
                     particles.push({
                         x: Math.random() * width,
                         y: Math.random() * height,
-                        vx: (Math.random() - 0.5) * 0.5,
-                        vy: (Math.random() - 0.5) * 0.5,
-                        size: Math.random() * 2 + 1
+                        vx: (Math.random() - 0.5) * 0.45,
+                        vy: (Math.random() - 0.5) * 0.45,
+                        size: Math.random() * 1.8 + 1
                     });
                 }
             };
 
+            var resizeTimer = null;
             var resizeCanvas = function () {
                 width = canvas.width = window.innerWidth;
                 height = canvas.height = window.innerHeight;
                 initParticles();
             };
 
-            window.addEventListener('resize', resizeCanvas);
-            window.addEventListener('mousemove', function (e) {
-                mouse.x = e.clientX;
-                mouse.y = e.clientY;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resizeCanvas, 150);
             }, { passive: true });
+
+            if (!isMobile) {
+                window.addEventListener('mousemove', function (e) {
+                    mouse.x = e.clientX;
+                    mouse.y = e.clientY;
+                }, { passive: true });
+
+                window.addEventListener('mouseleave', function () {
+                    mouse.x = -1000;
+                    mouse.y = -1000;
+                }, { passive: true });
+            }
 
             var animateCanvas = function () {
                 ctx.clearRect(0, 0, width, height);
-                if (mouse.x > 0) {
-                    var grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
+
+                if (mouse.x > 0 && !isMobile) {
+                    var grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 250);
                     grad.addColorStop(0, 'rgba(56, 189, 248, 0.08)');
                     grad.addColorStop(1, 'transparent');
                     ctx.fillStyle = grad;
                     ctx.fillRect(0, 0, width, height);
                 }
-                for (var i = 0; i < particles.length; i++) {
+
+                var pLen = particles.length;
+                for (var i = 0; i < pLen; i++) {
                     var p = particles[i];
                     p.x += p.vx;
                     p.y += p.vy;
-                    if (p.x < 0 || p.x > width) p.vx *= -1;
-                    if (p.y < 0 || p.y > height) p.vy *= -1;
-                    var dx = mouse.x - p.x;
-                    var dy = mouse.y - p.y;
-                    var dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < mouse.radius && dist > 0) {
-                        var force = (mouse.radius - dist) / mouse.radius;
-                        p.x -= (dx / dist) * force * 1.4;
-                        p.y -= (dy / dist) * force * 1.4;
+                    if (p.x < 0 || p.x > width) p.vx = -p.vx;
+                    if (p.y < 0 || p.y > height) p.vy = -p.vy;
+
+                    // Mouse avoidance with distance-squared check (avoids Math.sqrt when out of range)
+                    if (mouse.x > 0 && !isMobile) {
+                        var dx = mouse.x - p.x;
+                        var dy = mouse.y - p.y;
+                        var dSq = dx * dx + dy * dy;
+                        if (dSq < mouseRadiusSq && dSq > 0) {
+                            var dist = Math.sqrt(dSq);
+                            var force = (180 - dist) / 180;
+                            p.x -= (dx / dist) * force * 1.3;
+                            p.y -= (dy / dist) * force * 1.3;
+                        }
                     }
+
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                     ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
                     ctx.fill();
-                    for (var j = i + 1; j < particles.length; j++) {
+
+                    // Proximity connection lines with distance-squared threshold (avoids Math.sqrt for distant pairs)
+                    for (var j = i + 1; j < pLen; j++) {
                         var p2 = particles[j];
                         var ldx = p.x - p2.x;
                         var ldy = p.y - p2.y;
-                        var ldist = Math.sqrt(ldx * ldx + ldy * ldy);
-                        if (ldist < 145) {
+                        var ldistSq = ldx * ldx + ldy * ldy;
+                        if (ldistSq < maxDistSq) {
+                            var ldist = Math.sqrt(ldistSq);
                             ctx.beginPath();
                             ctx.moveTo(p.x, p.y);
                             ctx.lineTo(p2.x, p2.y);
-                            ctx.strokeStyle = 'rgba(59, 130, 246, ' + ((1 - ldist / 145) * 0.25) + ')';
+                            ctx.strokeStyle = 'rgba(59, 130, 246, ' + ((1 - ldist / maxDist) * 0.25) + ')';
                             ctx.lineWidth = 1;
                             ctx.stroke();
                         }
@@ -1422,6 +1618,7 @@
                     span.textContent = step.text;
                     row.appendChild(span);
                     terminalContent.appendChild(row);
+                    terminalContent.scrollTop = terminalContent.scrollHeight;
                 }, idx * 450));
             });
         };
@@ -1492,7 +1689,17 @@
             });
         });
 
-        /* 8. Post-submit confirmation (FormSubmit redirects back here with ?sent=1) */
+        /* 8. Form submit feedback (prevent double submits) */
+        var leadForm = document.getElementById('lead-form');
+        var submitBtn = document.getElementById('submit-btn');
+        if (leadForm && submitBtn) {
+            leadForm.addEventListener('submit', function () {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending Request to Wade...';
+            });
+        }
+
+        /* 9. Post-submit confirmation (FormSubmit redirects back here with ?sent=1) */
         var feedback = document.getElementById('form-feedback');
         if (window.location.search.indexOf('sent=1') !== -1) {
             feedback.textContent = '✓ Thanks — your request was sent to Wade. He usually replies the same business day. Prefer email? Write to waderaid@hotmail.com directly.';

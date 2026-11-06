@@ -1,0 +1,17 @@
+{
+  "name": "Wade Williams Wired",
+  "short_name": "WWWired",
+  "description": "AI Workflow Automation & Website Building for Small Business — San Diego",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070c18",
+  "theme_color": "#070c18",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
